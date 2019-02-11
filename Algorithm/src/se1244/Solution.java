@@ -16,23 +16,24 @@ public class Solution {
 			String cards = st.nextToken();
 			char arc[] = cards.toCharArray(); // 카드 배열
 			int arr[] = new int[arc.length];
+			int len = arr.length; // 길이
 
-			for (int i = 0; i < arr.length; i++) { // int형 arr 배열
+			for (int i = 0; i < len; i++) { // int형 arr 배열
 				arr[i] = arc[i] - '0';
 			}
-			boolean select[] = new boolean[arr.length]; // 선택체크 배열
-			int d[] = new int[arr.length]; // 중복있던 자리 체크
-			for (int i = 0; i < d.length; i++) {
+			boolean select[] = new boolean[len]; // 선택체크 배열
+			int d[] = new int[len]; // 중복있던 자리 체크
+			for (int i = 0; i < len; i++) {
 				d[i] = -1;
 			}
 
 			int n = Integer.parseInt(st.nextToken()); // 회전수
-			int len = arr.length; // 길이
+			
 
 			// 중복값 있는지 확인
 			boolean dd = false;
-			for (int i = 0; i < arr.length - 1; i++) {
-				for (int j = i + 1; j < arr.length; j++) {
+			for (int i = 0; i < len - 1; i++) {
+				for (int j = i + 1; j < len; j++) {
 					if (arr[i] == arr[j]) {
 						dd = true;
 						d[i] = arr[i];
@@ -46,13 +47,13 @@ public class Solution {
 				boolean rota = false; // 회전유무 판단용
 
 				int maxIdx = len - 1;
-				for (int j = arr.length - 1; j >= 0; j--) {
+				for (int j = len - 1; j >= 0; j--) {
 					if (arr[maxIdx] < arr[j] && select[j] != true) { // 바꾸지않은 최대값
 						maxIdx = j;
 					}
 				} // maxIdx 가 최대값
 
-				for (int j = 0; j < arr.length; j++) {
+				for (int j = 0; j < len; j++) {
 					if (select[j] != true) { //
 						if (maxIdx == j) {
 							select[j] = true;
@@ -69,8 +70,6 @@ public class Solution {
 						break;
 					}
 				}
-//				System.out.println(Arrays.toString(arr));
-//				System.out.println(Arrays.toString(select));
 				if (rota == true) {
 					continue;
 				} else { // 아직 로테안했으면 select가 전부 true
@@ -84,12 +83,11 @@ public class Solution {
 				}
 
 			}
-
 			// 같은 숫자가 있던 자리의 숫자들끼리 정렬
 			if (dd) {
-				for (int i = 0; i < d.length - 1; i++) {
+				for (int i = 0; i < len - 1; i++) {
 					if (d[i] != -1 && arr[i] != d[i]) {
-						for (int j = i + 1; j < d.length; j++) {
+						for (int j = i + 1; j < len; j++) {
 							if (d[i] == d[j] && d[j] != arr[j]) {
 								if (arr[j] > arr[i]) {
 									int tmp = arr[j];
@@ -104,7 +102,7 @@ public class Solution {
 			}
 
 			System.out.print("#" + TC + " ");
-			for (int j = 0; j < arr.length; j++) {
+			for (int j = 0; j < len; j++) {
 				System.out.print(arr[j]);
 			}
 			System.out.println();
