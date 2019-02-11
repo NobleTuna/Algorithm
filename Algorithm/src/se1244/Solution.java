@@ -18,18 +18,29 @@ public class Solution {
 			int arr[] = new int[arc.length];
 
 			for (int i = 0; i < arr.length; i++) { // int형 arr 배열
-				arr[i] = arc[i]-'0';
+				arr[i] = arc[i] - '0';
 			}
 			boolean select[] = new boolean[arr.length]; // 선택체크 배열
 			int n = Integer.parseInt(st.nextToken()); // 회전수
 			int len = arr.length; // 길이
 
+			// 중복값 있는지 확인
+			boolean dd = false;
+			for (int i = 0; i < arr.length - 2; i++) {
+				for (int j = i + 1; j < arr.length - 1; j++) {
+					if(arr[i]==arr[j]) {
+						dd = true;
+						break;
+					}					
+				}
+			}
+
 			for (int i = 0; i < n; i++) { // 돌려
 
 				boolean rota = false; // 회전유무 판단용
 
-				int maxIdx = len-1;
-				for (int j = arr.length-1; j >=0; j--) {
+				int maxIdx = len - 1;
+				for (int j = arr.length - 1; j >= 0; j--) {
 					if (arr[maxIdx] < arr[j] && select[j] != true) { // 바꾸지않은 최대값
 						maxIdx = j;
 					}
@@ -37,7 +48,7 @@ public class Solution {
 
 				for (int j = 0; j < arr.length; j++) {
 					if (select[j] != true) { //
-						if(maxIdx == j) {
+						if (maxIdx == j) {
 							select[j] = true;
 							rota = true;
 							i--;
@@ -52,11 +63,15 @@ public class Solution {
 						break;
 					}
 				}
-				System.out.println(Arrays.toString(arr));
-				System.out.println(Arrays.toString(select));
+//				System.out.println(Arrays.toString(arr));
+//				System.out.println(Arrays.toString(select));
 				if (rota == true) {
 					continue;
-				} else { // 아직 로테안했으면 맨뒤에 두개만 스왑
+				} else { // 아직 로테안했으면 select가 전부 true
+							// 중복 있으면 중복된거 스왑 ( 그냥 컨티뉴)
+					if(dd)
+						continue;
+							// 중복 없으면 맨뒤에 두개만 스왑
 					int tmp = arr[len - 1];
 					arr[len - 1] = arr[len - 2];
 					arr[len - 2] = tmp;
