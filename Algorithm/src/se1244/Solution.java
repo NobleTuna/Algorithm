@@ -21,17 +21,23 @@ public class Solution {
 				arr[i] = arc[i] - '0';
 			}
 			boolean select[] = new boolean[arr.length]; // 선택체크 배열
+			int d[] = new int[arr.length]; // 중복있던 자리 체크
+			for (int i = 0; i < d.length; i++) {
+				d[i] = -1;
+			}
+
 			int n = Integer.parseInt(st.nextToken()); // 회전수
 			int len = arr.length; // 길이
 
 			// 중복값 있는지 확인
 			boolean dd = false;
-			for (int i = 0; i < arr.length - 2; i++) {
-				for (int j = i + 1; j < arr.length - 1; j++) {
-					if(arr[i]==arr[j]) {
+			for (int i = 0; i < arr.length - 1; i++) {
+				for (int j = i + 1; j < arr.length; j++) {
+					if (arr[i] == arr[j]) {
 						dd = true;
-						break;
-					}					
+						d[i] = arr[i];
+						d[j] = arr[j];
+					}
 				}
 			}
 
@@ -69,15 +75,34 @@ public class Solution {
 					continue;
 				} else { // 아직 로테안했으면 select가 전부 true
 							// 중복 있으면 중복된거 스왑 ( 그냥 컨티뉴)
-					if(dd)
+					if (dd)
 						continue;
-							// 중복 없으면 맨뒤에 두개만 스왑
+					// 중복 없으면 맨뒤에 두개만 스왑
 					int tmp = arr[len - 1];
 					arr[len - 1] = arr[len - 2];
 					arr[len - 2] = tmp;
 				}
 
 			}
+
+			// 같은 숫자가 있던 자리의 숫자들끼리 정렬
+			if (dd) {
+				for (int i = 0; i < d.length - 1; i++) {
+					if (d[i] != -1 && arr[i] != d[i]) {
+						for (int j = i + 1; j < d.length; j++) {
+							if (d[i] == d[j] && d[j] != arr[j]) {
+								if (arr[j] > arr[i]) {
+									int tmp = arr[j];
+									arr[j] = arr[i];
+									arr[i] = tmp;
+								}
+							}
+						}
+					}
+				}
+
+			}
+
 			System.out.print("#" + TC + " ");
 			for (int j = 0; j < arr.length; j++) {
 				System.out.print(arr[j]);
