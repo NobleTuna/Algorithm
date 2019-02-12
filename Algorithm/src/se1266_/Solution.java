@@ -13,7 +13,6 @@ public class Solution {
 		Scanner sc = new Scanner(System.in);
 		int T = sc.nextInt();
 		for (int TC = 1; TC <= T; TC++) {
-			boolean[] chk = new boolean[18];
 			double sA = sc.nextDouble() / 100;
 			double fA = 1 - sA;
 			double sB = sc.nextDouble() / 100;
@@ -27,10 +26,7 @@ public class Solution {
 				double resultA = pow(sA, R[i]) * pow(fA, 18 - R[i]) * combi;
 				double resultB = pow(sB, R[i]) * pow(fB, 18 - R[i]) * combi;
 				// 둘다 성공한 경우를 뺴야됨
-				// 이걸 어케구하지
-				double resultAB = 0;
-
-				result = result + resultA + resultB - resultAB; // - resultAB
+				result = result + resultA + resultB - (resultA*resultB); // 교집합 뺴줘야되는거같은데 
 			}
 			System.out.println("#" + TC + " " + String.format("%.6f", result));
 
