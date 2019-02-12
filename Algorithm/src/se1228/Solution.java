@@ -1,4 +1,4 @@
-package se1228;
+package se1228; // 완료
 
 import java.util.LinkedList;
 import java.util.List;

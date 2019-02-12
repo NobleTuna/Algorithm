@@ -1,4 +1,4 @@
-package se1244;
+package se1244; // 완료
 
 import java.util.Scanner;
 
