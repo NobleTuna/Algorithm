@@ -26,7 +26,7 @@ public class Solution {
 				double resultA = pow(sA, R[i]) * pow(fA, 18 - R[i]) * combi;
 				double resultB = pow(sB, R[i]) * pow(fB, 18 - R[i]) * combi;
 				// 둘다 성공한 경우를 뺴야됨
-				result = result + resultA + resultB - (resultA*resultB); // 교집합 뺴줘야되는거같은데 
+				result = result + resultA + resultB - (resultA * resultB); // 교집합 뺴줘야되는거같은데
 			}
 			System.out.println("#" + TC + " " + String.format("%.6f", result));
 
@@ -54,9 +54,6 @@ public class Solution {
 	}
 
 	public static long com(int n, int r) { // 조합계산
-		if (n == 0 || r == n) {
-			return 1;
-		}
 		return fact[n] / (fact[n - r] * fact[r]);
 	}
 
