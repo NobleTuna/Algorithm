@@ -1,70 +1,42 @@
 package se1244;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
+import java.util.Scanner;
 
 public class Solution {
-	static int N;
-	static int result;
-
-	public static void main(String[] args) throws NumberFormatException, IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int T = Integer.parseInt(br.readLine());
-		for (int TC = 1; TC <= T; TC++) {
-			result = 0;
-			String input = br.readLine();
-			StringTokenizer st = new StringTokenizer(input);
-			String cards = st.nextToken();
-			char arc[] = cards.toCharArray(); // 카드 배열
-			int arr[] = new int[arc.length];
-			int len = arr.length; // 길이
-
-			for (int i = 0; i < len; i++) { // int형 arr 배열
-				arr[i] = arc[i] - '0';
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int T = sc.nextInt();
+		for(int tc = 1; tc <= T; tc++) {
+			String input = sc.next();
+			int[] num = new int[input.length()];
+			for(int i = 0; i < input.length(); i++) {
+				num[i] = input.charAt(i) - '0';
 			}
-
-			N = Integer.parseInt(st.nextToken()); // 회전수
-			go(arr, 0, 1, 0);
-			System.out.println("#"+TC+" "+result);
-
+			int N = sc.nextInt();
+			solve(num, 0, 0, N);
 		}
 	}
-
-	public static void go(int[] arr, int cnt, int current, int idx) {
-
-		if (cnt == N) {
+	static void solve(int[] num, int idx, int cnt, int N) {
+		//기본 부분 구현.
+		if( cnt == N ) {
+			//fin
+			//num배열의 숫자를 계산해보시오ㅋ
 			StringBuilder sb = new StringBuilder();
-			for (int i = 0; i < arr.length; i++) {
-				sb.append(arr[i]);
+			for(int i=0; i<num.length; i++) {
+				sb.append(num[i]);
 			}
-			System.out.println(sb.toString());
-			int sum = Integer.parseInt(sb.toString());
-			if (sum > result) {
-				result = sum;
-			}
+			int score = Integer.parseInt(sb.toString());
 			return;
 		}
-		if (idx >= arr.length - 1) {
+		//여긴 이후 다르게 처리될 거임
+		if(idx == num.length) {
+			
 			return;
 		}
-		if (current >= arr.length - 1) {
-			go(arr, 0, idx+1, idx+1);
-			return;
-		}
-
-		int tmp = arr[current];
-		arr[current] = arr[idx];
-		arr[idx] = tmp;
 		
-		go(arr, cnt + 1, current, idx);
 		
-		tmp = arr[current];
-		arr[current] = arr[idx];
-		arr[idx] = tmp;
-		
-		go(arr, cnt, current + 1, idx);
-
+		//유도된 부분 구현 및 재귀 호출
+		solve(num, idx+1, cnt+1, N);
 	}
 }
+
