@@ -3,10 +3,12 @@ package se1247;
 import java.util.Scanner;
 
 public class SolutionT {
+    static int ans = Integer.MAX_VALUE;
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int T = sc.nextInt();
 		for(int tc = 1; tc <= T; tc++) {
+            ans = Integer.MAX_VALUE;
 			int N = sc.nextInt();
 			int cx = sc.nextInt();
 			int cy = sc.nextInt();
@@ -19,10 +21,11 @@ public class SolutionT {
 			}
 			boolean[] visited = new boolean[N];
 			dfs(customers, visited, 0, 0, cx, cy, hx, hy);
-			System.out.println(ans);
+			System.out.println("#" + tc + " " + ans);
 		}
 	}
-	static int ans = 987654321;
+
+	
 	static void dfs(int[][] customers, boolean[] visited, int cnt, int dist, int lastx, int lasty, int hx, int hy) {
 		if(cnt == customers.length) {
 			//끝
