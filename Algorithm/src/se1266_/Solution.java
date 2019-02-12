@@ -14,16 +14,50 @@ public class Solution {
 		int T = sc.nextInt();
 		for (int TC = 1; TC <= T; TC++) {
 			boolean[] chk = new boolean[18];
-			int sA = sc.nextInt();
-			int sB = sc.nextInt();
+			double sA = sc.nextDouble() / 100;
+			double fA = 1 - sA;
+			double sB = sc.nextDouble() / 100;
+			double fB = 1 - sB;
 
-			for (int i = 0; i < R.length; i++) { // 일단 솟수만큼 구하는 확률
+			double result = 0;
+
+			for (int i = 0; i < 7; i++) {
+
+				long combi = com(18, R[i]); // 곱해줘야할 조합 경우의 수
+				double resultA = pow(sA, R[i]) * pow(fA, 18 - R[i]) * combi;
+				double resultB = pow(sB, R[i]) * pow(fB, 18 - R[i]) * combi;
+				// 둘다 성공한 경우를 뺴야됨
+				// 이걸 어케구하지
+				double resultAB = 0;
+
+				result = result + resultA + resultB - resultAB; // - resultAB
 			}
+			System.out.println("#" + TC + " " + String.format("%.6f", result));
 
 		}
 	}
 
-	public static long com(int n, int r) {
+	static double pow(double a, int n) { // 제곱
+		int k = n;
+		int cnt = 0;
+		while (k != 1) {
+			k /= 2;
+			cnt++;
+		}
+		double[] powMap = new double[cnt + 1];
+		powMap[0] = a;
+		for (int i = 1; i < powMap.length; i++)
+			powMap[i] = powMap[i - 1] * powMap[i - 1];
+		double result = 1;
+		for (int i = 0; i < cnt + 1; i++) {
+			if ((n & (1 << i)) != 0) {
+				result = powMap[i] * result;
+			}
+		}
+		return result;
+	}
+
+	public static long com(int n, int r) { // 조합계산
 		if (n == 0 || r == n) {
 			return 1;
 		}
