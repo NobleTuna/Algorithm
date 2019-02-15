@@ -131,11 +131,8 @@ public class Solution {
 								}
 							}
 						}
-
 					}
-
 				}
-
 			}
 			System.out.print("#" + tc+" ");
 			for (int a = 0; a < H; a++) {
