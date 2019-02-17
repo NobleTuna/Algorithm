@@ -2,13 +2,13 @@ package dfs;
 
 import java.util.Arrays;
 
-public class combi {
+public class Dfs {
 	public static void main(String[] args) {
 		int[] arr = {5,4,3,2,1};
 		
 		boolean[] visited = new boolean[arr.length];
 		
-		int[] result = new int[3];
+		int[] result = new int[arr.length];
 		go(arr, visited, result, 0);
 	}
 	
