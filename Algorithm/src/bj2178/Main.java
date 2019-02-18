@@ -36,9 +36,10 @@ public class Main {
 		}
 		int[] dc = { 0, 0, -1, 1 };
 		int[] dr = { 1, -1, 0, 0 };
-
+		boolean visited[][] = new boolean[R][C];
 		Queue<Point> q = new LinkedList<Main.Point>();
 		q.add(new Point(0, 0, 1));
+		visited[0][0] = true;
 		int result = 0;
 		while (!q.isEmpty()) {
 			Point now = q.poll();
@@ -50,11 +51,17 @@ public class Main {
 				break;
 			}
 			for (int i = 0; i < 4; i++) {
-				int nc = c + now.c;
-				int nr = r + now.r;
+				int nc = c + dc[i];
+				int nr = r + dr[i];
+				if (nc < 0 || nr < 0 || nc >= C || nr >= R) {
+					continue;
+				}
+				if (arr[nr][nc] == 1 && !visited[nr][nc]) {
+					visited[nr][nc] = true;
+					q.add(new Point(nr, nc, now.cnt + 1));
+				}
 			}
-
 		}
-
+		System.out.println(result);
 	}
 }
