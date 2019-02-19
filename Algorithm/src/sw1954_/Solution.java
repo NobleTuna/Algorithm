@@ -1,4 +1,4 @@
-package sw1954;
+package sw1954_;
 
 import java.util.Scanner;
 
@@ -27,16 +27,15 @@ public class Solution {
 	}
 
 	public static void right(int map[][], boolean[][] visited, int y, int x, int cnt) {
-		if (cnt == F + 1) {
+		if (cnt == F +1) {
 			return;
 		}
-//		System.out.println("right");
 		for (int i = 1; i <= N; i++) {
 			int nX = x + i;
 			if (nX >= N || visited[y][nX]) {
 //				System.out.println("go down");
 				down(map, visited, y, nX - 1, cnt);
-				break;
+				return;
 			}
 //			System.out.println(y+" "+nX);
 			visited[y][nX] = true;
@@ -46,7 +45,7 @@ public class Solution {
 	}
 
 	public static void down(int map[][], boolean[][] visited, int y, int x, int cnt) {
-		if (cnt == F+1 ) {
+		if (cnt == F +1) {
 			return;
 		}
 //		System.out.println("down");
@@ -56,9 +55,8 @@ public class Solution {
 			
 			if (nY >= N || visited[nY][x]) {
 				left(map, visited, nY - 1, x, cnt);
-				break;
+				return;
 			}
-			
 			visited[nY][x] = true;
 			map[nY][x] = cnt++;
 		}
@@ -66,14 +64,14 @@ public class Solution {
 	}
 
 	public static void left(int map[][], boolean[][] visited, int y, int x, int cnt) {
-		if (cnt == F +1) {
+		if (cnt == F+1) {
 			return;
 		}
 		for (int i = 1; i <= N; i++) {
 			int nX = x - i;
 			if (nX < 0 || visited[y][nX]) {
 				up(map, visited, y, nX + 1, cnt);
-				break;
+				return;
 			}
 			visited[y][nX] = true;
 			map[y][nX] = cnt++;
@@ -82,14 +80,16 @@ public class Solution {
 	}
 
 	public static void up(int map[][], boolean[][] visited, int y, int x, int cnt) {
-		if (cnt == F + 1) {
+		if (cnt == F +1) {
 			return;
 		}
 		for (int i = 1; i <= N; i++) {
-			int nY = x - i;
+			
+			int nY = y - i;
+			
 			if (nY < 0 || visited[nY][x]) {
 				right(map, visited, nY + 1, x, cnt);
-				break;
+				return;
 			}
 			visited[nY][x] = true;
 			map[nY][x] = cnt++;
