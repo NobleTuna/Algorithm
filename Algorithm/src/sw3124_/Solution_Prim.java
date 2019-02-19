@@ -1,4 +1,4 @@
-package sw3124;
+package sw3124_;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.PriorityQueue;
 
-public class Solution_T {
+public class Solution_Prim {
 	static long result;
 	static boolean[] visited;
 	static ArrayList<Vertex>[] vertexList;

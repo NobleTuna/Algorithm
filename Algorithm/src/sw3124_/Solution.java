@@ -1,4 +1,4 @@
-package sw3124;
+package sw3124_;
 
 import java.io.BufferedReader;
 import java.io.IOException;
