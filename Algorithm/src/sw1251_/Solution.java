@@ -3,13 +3,8 @@ package sw1251_;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.NavigableSet;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
-import java.util.TreeSet;
 
 public class Solution {
 	static class Edge implements Comparable<Edge> {
@@ -39,11 +34,14 @@ public class Solution {
 	static int parents[];
 	static int rank[];
 
-	public static void main(String[] args) throws NumberFormatException, IOException {
+	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int T = Integer.parseInt(br.readLine());
 
 		for (int tc = 1; tc <= T; tc++) {
+
+			PriorityQueue<Edge> q = new PriorityQueue<Solution.Edge>();
+			
 			int N = Integer.parseInt(br.readLine());
 			int P[][] = new int[N][2]; // a, b, 좌표입력받
 			parents = new int[N];
@@ -59,32 +57,23 @@ public class Solution {
 			st = new StringTokenizer(input);
 			for (int i = 0; i < N; i++) {
 				P[i][1] = Integer.parseInt(st.nextToken());
+				
+				//바로 큐에 넣어
+				if(i==0)
+					continue;
+				
+				for (int j = 0; j < i; j++) {
+					double cost = (Math.pow(P[i][0] - P[j][0], 2) + Math.pow(P[i][1] - P[j][1], 2));
+					q.add(new Edge(i, j, cost));
+				}
 			}
 
 			E = Double.parseDouble(br.readLine());
 			result = 0;
 
-			//// 간선개수만큼의 1과 2 사이의 거리 Node 트리셋에 넣어
-			// 트리셋 중복처리떄문에 우선순위큐로 변경
-			PriorityQueue<Edge> q = new PriorityQueue<Solution.Edge>();
-
-			// P[i][0] = x1, P[i][1] = y2;
-			// P[j][0] = x2, P[j][1] = y2;
-
-			int cntEdge = 0; // 간선 숫자 체크
-			for (int i = 0; i < N - 1; i++)
-				for (int j = i + 1; j < N; j++) {
-					double cost = (Math.pow(P[i][0] - P[j][0], 2) + Math.pow(P[i][1] - P[j][1], 2)) * E;
-					q.add(new Edge(i, j, cost));
-					cntEdge++;
-				}
-			
-//			Iterator<Edge> t = tree.iterator(); // 트리셋 선형화
-
 			for (int i = 0; i < N; i++) { // 노드 초기화
 				makeSet(i);
 			}
-
 			double result = 0;
 			int cnt = 0; // 현재 유니온한 간선 숫자 체크용
 
@@ -102,15 +91,12 @@ public class Solution {
 
 				if (pa != pb) {
 					unionSet(pa, pb);
-					result += k.cost;
+					result += (k.cost*E);
 					cnt++;
 				}
 			}
-
 			System.out.println("#" + tc + " " + Math.round(result));
-
 		}
-
 	}
 
 	static void makeSet(int x) {
