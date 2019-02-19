@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;
 
-public class Solution2 {
+public class Solution_Kruskal {
 	static int[] parents;
 	static int[] rank;
 
@@ -37,7 +37,7 @@ public class Solution2 {
 //				edges[minIdx] = edges[i];
 //				edges[i] = tmp;
 //			}
-			
+
 			Arrays.sort(edges, new Comparator<int[]>() {
 
 				@Override
@@ -47,16 +47,16 @@ public class Solution2 {
 				}
 			});
 
-
-			for (int i = 1; i < V +1; i++)
+			for (int i = 1; i < V + 1; i++)
 				make_set(i);
 
 			long result = 0;
-//			int cnt = 0;
+			int cnt = 0;
 			for (int i = 0; i < E; i++) {
 
-//				if (cnt == V-1)
-//					break;
+				if (cnt == V - 1) { // 정점 숫자 -1
+					break;
+				}
 				// 간선배열정보를 탐색하면서, 시작-끝 정점이 속한 집합을 얻어와서
 				int a = findSet(edges[i][0]);
 				int b = findSet(edges[i][1]);
@@ -66,7 +66,7 @@ public class Solution2 {
 					union(a, b);
 					// 가중치 누적
 					result += edges[i][2];
-//					cnt++;
+					cnt++;
 				}
 			}
 			System.out.println("#" + tc + " " + result);
