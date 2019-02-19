@@ -33,6 +33,7 @@ public class Solution {
 			return 0;
 		}
 	}
+
 	static double E;
 	static double result;
 	static int parents[];
@@ -73,11 +74,11 @@ public class Solution {
 			int cntEdge = 0; // 간선 숫자 체크
 			for (int i = 0; i < N - 1; i++)
 				for (int j = i + 1; j < N; j++) {
-					double cost = Math.pow(P[i][0] - P[j][0], 2) + Math.pow(P[i][1] - P[j][1], 2) * E;
+					double cost = (Math.pow(P[i][0] - P[j][0], 2) + Math.pow(P[i][1] - P[j][1], 2)) * E;
 					q.add(new Edge(i, j, cost));
 					cntEdge++;
 				}
-
+			
 //			Iterator<Edge> t = tree.iterator(); // 트리셋 선형화
 
 			for (int i = 0; i < N; i++) { // 노드 초기화
@@ -87,7 +88,7 @@ public class Solution {
 			double result = 0;
 			int cnt = 0; // 현재 유니온한 간선 숫자 체크용
 
-			for (int i = 0; i <= cntEdge; i++) {
+			while (!q.isEmpty()) {
 
 				if (cnt == N - 1)
 					break;
