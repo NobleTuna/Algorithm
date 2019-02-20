@@ -1,4 +1,4 @@
-package sw1954_;
+package sw1954;
 
 import java.util.Scanner;
 
