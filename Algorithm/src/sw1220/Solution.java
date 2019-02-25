@@ -1,4 +1,4 @@
-package sw1220_;
+package sw1220;
 
 import java.io.BufferedReader;
 import java.io.IOException;
