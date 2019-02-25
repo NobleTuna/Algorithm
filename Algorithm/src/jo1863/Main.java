@@ -32,7 +32,7 @@ public class Main {
 		}
 		Set<Integer> h = new HashSet<>();
 		for(int i=1; i<n+1; i++) {
-			h.add(parent[i]);
+			h.add(find(i));
 		}
 		System.out.println(h.size());
 	}
