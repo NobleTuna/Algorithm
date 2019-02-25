@@ -47,7 +47,6 @@ public class Solution {
 			}
 
 			PriorityQueue<result> pq = new PriorityQueue<result>();
-			int resultN = 0;
 			ry = 0;
 			rx = 0;
 
@@ -56,7 +55,7 @@ public class Solution {
 					if (map[i][j] != 0 && map[i][j] != -1) {
 						find(i, j, map);
 						pq.add(new result(ry - i + 1, rx - j + 1));
-						resultN++;
+						j=rx;
 //						for(int a=0; a<N; a++) {
 //							for(int b=0; b<N; b++) {
 //								System.out.print(map[a][b]+" ");
@@ -65,7 +64,7 @@ public class Solution {
 					}
 				}
 			}
-			System.out.print("#" + tc + " " + resultN + " ");
+			System.out.print("#" + tc + " " + pq.size() + " ");
 			while (!pq.isEmpty()) {
 				result r = pq.poll();
 				System.out.print(r.y + " " + r.x + " ");
