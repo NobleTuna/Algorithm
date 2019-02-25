@@ -28,7 +28,6 @@ public class Solution {
 			}
 			return Integer.compare(this.x * this.y, o.x * o.y);
 		}
-
 	}
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
