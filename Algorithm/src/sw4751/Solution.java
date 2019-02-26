@@ -1,4 +1,4 @@
-package sw4751_;
+package sw4751;
 
 import java.io.BufferedReader;
 import java.io.IOException;
