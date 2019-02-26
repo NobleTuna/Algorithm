@@ -3,6 +3,7 @@ package jo2634;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Main2 {
@@ -21,20 +22,37 @@ public class Main2 {
 		for (int i = 0; i < M; i++) {
 			gun[i] = Integer.parseInt(st.nextToken());
 		}
+		Arrays.sort(gun);
+
 		int result = 0;
 		for (int i = 0; i < N; i++) {
 			input = br.readLine();
 			st = new StringTokenizer(input);
 			int x = Integer.parseInt(st.nextToken());
 			int y = Integer.parseInt(st.nextToken());
+			
 			if (y > L)
 				continue;
-			for (int j = 0; j < M; j++) {
-				if (Math.abs(x - gun[j]) + y <= L) {
+
+			int min = 0;
+			int max = M - 1;
+			int mid;
+			while (true) {
+				mid = (min + max) / 2;
+				if (Math.abs(x - gun[mid]) + y <= L) {
 					result++;
 					break;
 				}
+				if (min >= max)
+					break;
+
+				if (x < gun[mid]) {
+					max = mid - 1;
+				} else if (x > gun[mid]) {
+					min = mid + 1;
+				}
 			}
+
 		}
 		System.out.println(result);
 	}
