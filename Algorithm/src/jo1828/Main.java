@@ -1,82 +1,49 @@
-package jo1828; // 냉장고 // _APS_0227
+package jo1828;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.StringTokenizer;
+import java.util.Scanner;
 
 public class Main {
-	static class C {
-		int min;
-		int max;
-		int tum;
-
-		public C(int x, int y) {
-			this.min = x;
-			this.max = y;
-			this.tum = Math.abs(x - y);
-		}
-
-	}
-
-	public static void main(String[] args) throws NumberFormatException, IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
-		int N = Integer.parseInt(br.readLine());
-
-		C arr[] = new C[N];
-
-		for (int i = 0; i < N; i++) {
-			String input = br.readLine();
-			StringTokenizer st = new StringTokenizer(input);
-			int a = Integer.parseInt(st.nextToken());
-			int b = Integer.parseInt(st.nextToken());
-			arr[i] = new C(a, b);
-		}
-
-		Arrays.sort(arr, new Comparator<C>() {
-			@Override
-			public int compare(C o1, C o2) {
-				// TODO Auto-generated method stub
-				return o1.tum - o2.tum;
-			}
-		});
-
-//		for (int i = 0; i < arr.length; i++) {
-//			System.out.print(arr[i].tum + " ");
-//		}
-
-		Queue<C> q = new LinkedList<>();
-		for (int i = 0; i < arr.length; i++) {
-			q.add(arr[i]);
-		}
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int N = sc.nextInt();
+		int[][] arr = new int[N][2];
+		boolean[] check = new boolean[N];
+		int minRange;
+		int idx;
 		int result = 0;
-		while (!q.isEmpty()) {
-
-			C rfri = q.poll();
-			int min = rfri.min;
-			int max = rfri.max;
-
-			int size = q.size();
-			for (int i = 0; i < size; i++) {
-				C item = q.poll();
-				if (item.min <= min && item.max >= min) {
-					max = item.max;
-					System.out.println("나간놈" + item.min + " " + item.max);
-				} else if (item.min <= max && item.max >= max) {
-					min = item.min;
-					System.out.println("나간놈" + item.min + " " + item.max);
-				} else {
-					q.add(item);
+		for (int i = 0; i < N; i++) {
+			arr[i][0] = sc.nextInt();
+			arr[i][1] = sc.nextInt();
+		}
+		while (true) {
+			minRange = Integer.MAX_VALUE;
+			idx = 0;
+			for (int i = 0; i < N; i++) {
+				if (!check[i] && minRange > (arr[i][1] - arr[i][0])) {
+					minRange = (arr[i][1] - arr[i][0]);
+					idx = i;
 				}
 			}
-			System.out.println("최종냉장고 범위 : " + min + " " + max);
-			result++;
+
+			boolean flag = false;
+			for (int i = 0; i < N; i++) {
+				if (!check[i]) {
+					if (arr[i][0] <= arr[idx][0] & arr[i][1] >= arr[idx][0]
+							|| arr[i][0] <= arr[idx][1] & arr[i][1] >= arr[idx][1]) {
+						arr[idx][1] = Math.min(arr[idx][1], arr[i][1]);
+						check[i] = true;
+						flag = true;
+					}
+				}
+			}
+			if (flag) {
+				result++;
+			} else {
+				break;
+			}
 		}
 		System.out.println(result);
+
+		sc.close();
 	}
 }
