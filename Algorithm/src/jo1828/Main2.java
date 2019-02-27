@@ -23,7 +23,6 @@ public class Main2 {
 		}
 
 		Arrays.sort(arr, new Comparator<int[]>() {
-
 			@Override
 			public int compare(int[] o1, int[] o2) {
 				// TODO Auto-generated method stub
@@ -36,8 +35,6 @@ public class Main2 {
 		int max = arr[0][1];
 
 		for (int i = p + 1; i < N; i++) {
-
-
 			if (arr[i][0] <= max) {
 				if (arr[i][1] < max) { // 기준의 최대값보다 다음놈의 최대값이 작거나 같다면 바꿈
 					max = arr[i][1];
@@ -48,8 +45,6 @@ public class Main2 {
 				result++; // 냉장고 생성
 			}
 		}
-
 		System.out.println(result);
-
 	}
 }
