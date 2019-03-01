@@ -1,4 +1,4 @@
-package jo1642;
+package jo1462;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -67,6 +67,7 @@ public class Main {
 
 		q.add(new Node(startY, startX, 0));
 		visited[startY][startX] = true; // 지나옴 체크
+		int cnt = 0;
 
 		while (!q.isEmpty()) {
 
