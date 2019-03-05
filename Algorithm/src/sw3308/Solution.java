@@ -25,34 +25,32 @@ public class Solution {
 				int left = 0;
 				int right = list.size() - 1;
 				int target = 0;
-				while (true) {
 
-					if (left >= right) {
-
-						target = -1;
-						break;
-					}
-
-					int mid = (left + right) / 2;
-					if (list.get(mid) < A && A < list.get(mid + 1)) {
-						target = mid + 1;
-						break;
-					}
-
-					else if (A < list.get(mid)) {
-						right = mid - 1;
-					} else if (list.get(mid) < A) {
-						left = mid + 1;
-					}
-				}
-
-				if (target == -1)
+				if (list.size() == 0 || list.get(list.size() - 1) < A) {
 					list.add(A);
-				else {
-					list.remove(target + 1);
-					list.add(target + 1, A);
-				}
+				} else if (A < list.get(0)) {
+					list.remove(0);
+					list.add(0, A);
 
+				} else {
+					while (true) {
+
+						int mid = (left + right) / 2;
+						if (list.get(mid) < A && A < list.get(mid + 1)) {
+							target = mid + 1;
+							break;
+						}
+
+						else if (A < list.get(mid)) {
+							right = mid - 1;
+						} else if (list.get(mid) < A) {
+							left = mid + 1;
+						}
+					}
+					list.remove(target);
+					list.add(target, A);
+
+				}
 			}
 			int result = list.size();
 
