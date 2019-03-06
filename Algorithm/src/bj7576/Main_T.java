@@ -1,4 +1,4 @@
-package bj7569;
+package bj7576;
 
 import java.util.LinkedList;
 import java.util.Queue;
