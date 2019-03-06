@@ -22,55 +22,46 @@ public class Main {
 
 	public static void main(String[] args) throws IOException {
 		Scanner sc = new Scanner(System.in);
-//		String input = br.readLine();
-//		StringTokenizer st = new StringTokenizer(input);
 		M = sc.nextInt(); // 가로
 		N = sc.nextInt(); // 세로
 		H = sc.nextInt(); // 높이
 
-		Queue<Position> q = new LinkedList<>();
+		q = new LinkedList<Position>();
 
-		int box[][][] = new int[H][N][M];
-		boolean visited[][][] = new boolean[H][N][M];
-
-		boolean isFull = true;
+		box = new int[H][N][M];
 
 		for (int h = 0; h < H; h++) {
 			for (int i = 0; i < N; i++) {
-//				input = br.readLine();
-//				st = new StringTokenizer(input);
 				for (int j = 0; j < M; j++) {
 					box[h][i][j] = sc.nextInt();
-					if (box[h][i][j] == 0)
-						isFull = false;
-
 					if (box[h][i][j] == 1) {
-						visited[h][i][j] = true;
 						q.add(new Position(h, i, j, 0));
 					}
 				}
 			}
 		}
-		System.out.println("1ck");
-
-		if (isFull) {
+		if (q.isEmpty()) {
 			System.out.println(0);
+			sc.close();
 			return;
 		}
 
 		ans = 0;
-		bfs(q, box, visited);
+		
+		bfs();
 
 		for (int i = 0; i < H; i++) {
 			for (int j = 0; j < N; j++) {
-				for (int k = 0; k < N; k++) {
+				for (int k = 0; k < M; k++) {
 					if (box[i][j][k] == 0) {
 						System.out.print(-1);
+						sc.close();
 						return;
 					}
 				}
 			}
 		}
+
 		System.out.println(ans);
 //		for(int i=0; i<H; i++) {
 //			for(int j=0; j<N; j++) {
@@ -79,11 +70,13 @@ public class Main {
 //				}System.out.println();
 //			}System.out.println();System.out.println();
 //		}
-
+		sc.close();
 	}
 
-	static int dx[] = { 0, 0, 1, -1, 0, 0 };
-	static int dy[] = { 0, 0, 0, 0, 1, -1 };
+	static int[][][] box;
+	static Queue<Position> q;
+	static int dx[] = { 0, 0, 0, 0, 1, -1 };
+	static int dy[] = { 0, 0, 1, -1, 0, 0 };
 	static int dz[] = { 1, -1, 0, 0, 0, 0 };
 	static int ans;
 
@@ -93,7 +86,7 @@ public class Main {
 
 	static int H, N, M; // 높이 H, 세로 N, 가로 M
 
-	static void bfs(Queue<Position> q, int[][][] map, boolean[][][] visited) {
+	static void bfs() {
 
 		while (!q.isEmpty()) {
 
@@ -102,7 +95,7 @@ public class Main {
 			int z = P.i;
 			int y = P.j;
 			int x = P.k;
-			ans = P.value;
+			ans = Math.max(ans, P.value);
 
 			for (int d = 0; d < 6; d++) {
 
@@ -110,11 +103,10 @@ public class Main {
 				int cy = dy[d] + y;
 				int cx = dx[d] + x;
 
-				if (outRange(cz, cy, cx) || visited[cz][cy][cx] || map[cz][cy][cx] != 0)
+				if (outRange(cz, cy, cx) || box[cz][cy][cx] != 0)
 					continue;
 
-				visited[cz][cy][cx] = true;
-				map[cz][cy][cx] = 1;
+				box[cz][cy][cx] = 1;
 
 				q.add(new Position(cz, cy, cx, P.value + 1));
 			}
