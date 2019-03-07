@@ -1,4 +1,4 @@
-package sw3124_;
+package sw3124_kruskal;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package sw3124_; // 트리셋으로 해보자
+package sw3124_kruskal; // 트리셋으로 해보자
 
 import java.util.Arrays;
 import java.util.Comparator;
