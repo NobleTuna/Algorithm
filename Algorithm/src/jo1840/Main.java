@@ -1,4 +1,4 @@
-package jo1840;
+package jo1840; //치즈
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,9 +20,10 @@ public class Main {
 
 	}
 
+	static int allCheese;
 	static int R, C;
-	static int[] dx = { 0, 0, 1, -1 };
-	static int[] dy = { -1, 1, 0, 0 };
+	static int[] dx = { -1, 1, 0, 0 };
+	static int[] dy = { 0, 0, 1, -1 };
 	static int[][] map;
 	static Queue<Position> q;
 
@@ -45,9 +46,28 @@ public class Main {
 				map[i][j] = Integer.parseInt(st.nextToken());
 				if (isStart(i, j)) {
 					q.add(new Position(i, j));
-				}
+				} else if (map[i][j] == 1)
+					allCheese++;
 			}
 		}
+
+//		while(!q.isEmpty()) {
+//			Position P = q.poll();
+//			int y = P.y;
+//			int x = P.x;
+//			map[y][x] = -1;
+//		}
+//
+//
+//		System.out.println();
+//		System.out.println();
+//		System.out.println();
+
+//		for(int i=0; i<R; i++) {
+//			for(int j=0; j<C; j++) {
+//				System.out.print(map[i][j]+" ");
+//			}System.out.println();
+//		}System.out.println();
 		time = 0;
 		lastCheese = 0;
 		go();
@@ -60,13 +80,13 @@ public class Main {
 	static int lastCheese;
 
 	static void go() {
-
-		while (!q.isEmpty()) {
-
-			int oneTime = q.size();
-			Boolean[][] vistied = new Boolean[R][C];
-
-			for (int t = 0; t < oneTime; t++) { // 한번
+		while (true) {
+			boolean[][] visitied = new boolean[R][C];
+			q.add(new Position(0, 0));
+			q.add(new Position(0, 99));
+			q.add(new Position(99, 0));
+			q.add(new Position(99, 99));
+			while (!q.isEmpty()) {
 
 				Position P = q.poll();
 				int y = P.y;
@@ -75,23 +95,38 @@ public class Main {
 				for (int d = 0; d < 4; d++) {
 					int ny = y + dy[d];
 					int nx = x + dx[d];
-					if (outRange(ny, nx) || vistied[ny][nx]) {
+
+					if (outRange(ny, nx) || visitied[ny][nx]) {
 						continue;
 					}
 
-					vistied[ny][nx] = true;
+					visitied[ny][nx] = true;
 
 					if (map[ny][nx] == 1) {
 						map[ny][nx] = -1;
+						allCheese--;
 						continue;
 					}
-
 					q.add(new Position(ny, nx));
 				}
 			}
+//			for (int i = 0; i < R; i++) {
+//				for (int j = 0; j < C; j++) {
+//					System.out.print(map[i][j] + " ");
+//				}
+//				System.out.println();
+//			}
+//			System.out.println();
+//			
+//			for (int i = 0; i < R; i++) {
+//				for (int j = 0; j < C; j++) {
+//					System.out.print(visitied[i][j] + " ");
+//				}
+//				System.out.println();
+//			}
+//			System.out.println();
 
 			time++;
-			boolean isLast = true;
 
 			lastCheese = 0;
 
@@ -99,16 +134,13 @@ public class Main {
 				for (int j = 0; j < C; j++) {
 					if (map[i][j] != 0) {
 						lastCheese++;
-						if (map[i][j] == 1)
-							isLast = false;
+						if (map[i][j] == -1)
+							map[i][j] = 0;
 					}
 				}
 			}
-
-			if (isLast) {
-				break;
-			}
-
+			if (allCheese == 0)
+				return;
 		}
 	}
 
