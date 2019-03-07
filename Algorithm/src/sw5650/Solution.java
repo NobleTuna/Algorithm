@@ -62,7 +62,6 @@ public class Solution {
 			for (int i = 0; i < N; i++) {
 				for (int j = 0; j < N; j++) {
 					if (map[i][j] == 0) {
-//						System.out.println("최후의 외침"+" "+i+" "+j);
 						go(i, j, i, j, 0, 0, true);
 						go(i, j, i, j, 1, 0, true);
 						go(i, j, i, j, 2, 0, true);
@@ -82,6 +81,8 @@ public class Solution {
 	static int dx[] = { 0, 0, -1, 1 };
 
 	static int maxScore;
+	
+	
 
 	static void go(int sy, int sx, int y, int x, int dir, int score, boolean isStart) {
 		
