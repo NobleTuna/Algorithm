@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.StringTokenizer;
 
@@ -44,23 +45,22 @@ public class Solution {
 
 			ans = 0;
 
+			mapNum = new int[N][N];
 			int numbering = 0;
 			for (int i = 0; i < N; i++) {
 				for (int j = 0; j < N; j++) {
 					mapNum[i][j] = numbering++;
 				}
 			}
+			sum = new ArrayList[numbering];
 
 			for (int i = 0; i < M; i++) { // 하루
 
 				nextMap = new Item[N][N];
-				mapNum = new int[N][N];
 
-				sum = new ArrayList[numbering];
-				for (int k = 0; k < numbering; k++) {
+				for (int k = 0; k < numbering; k++) { //매일 리스트 초기화
 					sum[k] = new ArrayList<>();
 				}
-				chkIdx = 0;
 
 				for (int y = 0; y < N; y++) {
 					for (int x = 0; x < N; x++) {
@@ -72,12 +72,26 @@ public class Solution {
 				}
 				// 세방향이상에서 오는거 체크해줘야함
 
-				for (int k = 0; k < numbering; k++) {
+				for (int k = 0; k < sum.length; k++) {
 					if (!sum[k].isEmpty()) {
-						// 꺼내고 넘버 찾아
+
+						int sumSize = 0;
+						int max = 0;
+						int maxDir = 0;
+						int y = sum[k].get(0).y;
+						int x = sum[k].get(0).x;
+
+						for (chkItem C : sum[k]) {
+							// 꺼내고 넘버 찾아
+							sumSize += C.size;
+							if (C.size > max) {
+								max = C.size;
+								maxDir = C.dir;
+							}
+						}
+						nextMap[y][x] = new Item(sumSize, maxDir);
 					}
 				}
-
 				map = nextMap.clone();
 			}
 
@@ -89,6 +103,8 @@ public class Solution {
 				}
 			}
 			System.out.println("#" + tc + " " + ans);
+//			for (int i = 0; i < N; i++)
+//				System.out.println(Arrays.toString(mapNum[i]));
 		}
 	}
 
@@ -98,20 +114,26 @@ public class Solution {
 	// 다돌고 끝나고 리스트가 비어있지 않으면 비교하며 처리
 	static int[][] mapNum;
 	static Item[][] nextMap;
-	static List<Item>[] sum;
+	static List<chkItem>[] sum;
 	static int dx[] = { 0, 0, 0, -1, 1 };
 	static int dy[] = { 0, -1, 1, 0, 0 };
-	static int chkIdx;
 
 	static boolean ChkBound(int y, int x) {
 		return y == 0 || x == 0 || y == N - 1 || x == N - 1;
 	}
 
-	static class chkItem {  //만드는중
+	static class chkItem { // 중복처리용 클래스, 자리찾기 위해 검색한번 더하기 싫어서 x,y추가
 		int y;
 		int x;
 		int dir;
 		int size;
+
+		public chkItem(int y, int x, int dir, int size) {
+			this.y = y;
+			this.x = x;
+			this.dir = dir;
+			this.size = size;
+		}
 	}
 
 	static void go(int y, int x) { // 상: 1, 하: 2, 좌: 3, 우: 4;
@@ -137,22 +159,13 @@ public class Solution {
 
 			if (size == 0) // 사이즈 0되면 죽음
 				return;
+			
 			nextMap[nextY][nextX] = new Item(size, dir);
 			return;
 		}
-
-		if (nextMap[nextY][nextX] != null) { // nextmap에 무언가 있을때
-
+			/// 이동
 			int num = mapNum[nextY][nextX];
-
-			sum[num].add(new Item(size, dir));
-
-			/// 에[idx]에 해당 리스트에 넣어줘야함
-
+			sum[num].add(new chkItem(nextY, nextX, dir, size));
 			return;
-		} else if (nextMap[nextY][nextX] == null) { // 비어있을때
-			nextMap[nextY][nextX] = new Item(size, dir);
-			return;
-		}
 	}
 }
