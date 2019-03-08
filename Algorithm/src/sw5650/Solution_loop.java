@@ -74,6 +74,7 @@ public class Solution_loop {
 
 			/// 방향 0,1,2,3 // 상 하 좌 우
 			System.out.println("#" + tc + " " + maxScore);
+			System.out.println(gy+" "+gx);
 		}
 	}
 
@@ -81,6 +82,8 @@ public class Solution_loop {
 	static int dx[] = { 0, 0, -1, 1 };
 
 	static int maxScore;
+	static int gy;
+	static int gx;
 
 	static void go(int sy, int sx, int y, int x, int dir, int score, boolean isStart) {
 
@@ -88,6 +91,8 @@ public class Solution_loop {
 
 			if (map[y][x] == -1 || (!isStart && sy == y && sx == x)) {
 				maxScore = Math.max(maxScore, score);
+				gy = sy;
+				gx = sx;
 				break;
 			}
 
