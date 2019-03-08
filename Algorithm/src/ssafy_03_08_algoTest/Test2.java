@@ -32,12 +32,14 @@ public class Test2 {
 
 // 각 중량별로 최소 값 찾기
 			for (int i = map[0] + 1; i < dp.length; i++) { // 가장 작은 봉지가 있는 그 다음부터 찾아보자.
+				
 				if (dp[i] > 0) { // 이지 최소값 ==> 고민할 필요가 없다.
 					continue;
 				}
 
 // ex) 1, 4, 6 키로의 봉지가 주어질 때 dp[n] = dp[n-1]+1 or dp[n-4]+2 or dp[n-6]+1 중 최소값
 				int min = Integer.MAX_VALUE;
+				
 				for (int j = 0; j < map.length; j++) {
 					int m = map[j];
 					if (i > m && dp[i - m] > 0) {
