@@ -60,6 +60,9 @@ public class Solution_Kruskal {
 				// 간선배열정보를 탐색하면서, 시작-끝 정점이 속한 집합을 얻어와서
 				int a = findSet(edges[i][0]);
 				int b = findSet(edges[i][1]);
+
+				if (a == b)
+					continue;
 				// 서로 다른 집합(아직 연결되지 않은 정점) 이라면
 				if (a != b) {
 					// union
