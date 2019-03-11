@@ -58,6 +58,13 @@ public class Solution_loop {
 					}
 				}
 			}
+//			for (int i = 0; i < N; i++) {
+//				for (int j = 0; j < N; j++) {
+//					System.out.print(map[i][j] + " ");
+//				}
+//				System.out.println();
+//			}
+
 			maxScore = 0;
 			for (int i = 0; i < N; i++) {
 				for (int j = 0; j < N; j++) {
@@ -74,7 +81,7 @@ public class Solution_loop {
 
 			/// 방향 0,1,2,3 // 상 하 좌 우
 			System.out.println("#" + tc + " " + maxScore);
-			System.out.println(gy+" "+gx);
+//			System.out.println(gy + " " + gx);
 		}
 	}
 
@@ -88,6 +95,7 @@ public class Solution_loop {
 	static void go(int sy, int sx, int y, int x, int dir, int score, boolean isStart) {
 
 		while (true) {
+
 
 			if (map[y][x] == -1 || (!isStart && sy == y && sx == x)) {
 				maxScore = Math.max(maxScore, score);
@@ -115,12 +123,15 @@ public class Solution_loop {
 				score++;
 			}
 
-			if (map[ny][nx] == 6 || map[ny][nx] == 7 || map[ny][nx] == 8 || map[ny][nx] == 9 || map[ny][nx] == 10) {
+			if (map[ny][nx] == 12 || map[ny][nx] == 13 || map[ny][nx] == 14 || map[ny][nx] == 15 || map[ny][nx] == 16
+					|| map[ny][nx] == 17 || map[ny][nx] == 18 || map[ny][nx] == 19 || map[ny][nx] == 20
+					|| map[ny][nx] == 21) {
 				int WN = map[ny][nx]; // 웜홀넘버
 				// 웜홀은 12,13/14,15/16,17/18,19/20,21
 				if (WN % 2 == 0) {
 					ny = wormHole[WN + 1][0];
 					nx = wormHole[WN + 1][1];
+//					System.out.println("웜호올" + ny + " " + nx);
 				} else {
 					ny = wormHole[WN - 1][0];
 					nx = wormHole[WN - 1][1];
