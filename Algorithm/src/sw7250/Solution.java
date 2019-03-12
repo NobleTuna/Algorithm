@@ -140,6 +140,8 @@ public class Solution {
 		}
 	}
 
+	
+
 	static class Position { // 1 = 스캇, 2 = 악당, 3 = 불
 		int y;
 		int x;
