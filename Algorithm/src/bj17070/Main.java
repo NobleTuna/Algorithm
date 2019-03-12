@@ -10,6 +10,7 @@ public class Main {
 
 	static int N;
 	static int[][] map;
+	static int[][][] memo;
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -24,6 +25,7 @@ public class Main {
 			}
 		}
 		ans = 0;
+		memo = new int[N][N][4];
 //		tracking = new int[N][N];
 		go(0, 1, 1);
 //		for (int i = 0; i < N; i++) {
@@ -43,7 +45,7 @@ public class Main {
 				return;
 		}
 		if (dir == 2) {
-			if (outRange(y - 1, x) || outRange(y, x - 1)||outRange(y, x))
+			if (outRange(y - 1, x) || outRange(y, x - 1) || outRange(y, x))
 				return;
 		}
 //		System.out.println(y+" "+x+" "+dir);
