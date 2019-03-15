@@ -50,23 +50,25 @@ public class Solution {
 			for (int i = 0; i < N; i++) {
 				for (int j = 0; j < N; j++) {
 					if (map[i][j] == maxMountain) {
-						start.add(new Position(j, i));
+						start.add(new Position(i, j));
 					}
 				}
 			}
 			ans = 0;
-			
 
 			for (int i = 0; i < N; i++) {
 				for (int j = 0; j < N; j++) {
-					map[i][j] -= K;
-					for (Position P : start) {
-						memo = new int[N][N];
+					for (int t = 0; t <= K; t++) {
+						map[i][j] -= t;
+						for (Position P : start) {
+							memo = new int[N][N];
+							boolean[][] gobo = new boolean[N][N];
+							gobo[P.y][P.x] = true;
+							go(map, gobo, P.y, P.x, 1);
 
-						go(map, new boolean[N][N], P.y, P.x, 0);
-
+						}
+						map[i][j] += t;
 					}
-					map[i][j] += K;
 				}
 			}
 
@@ -102,6 +104,7 @@ public class Solution {
 				continue;
 			visited[ny][nx] = true;
 			go(map, visited, ny, nx, deep + 1);
+			visited[ny][nx] = false;
 
 		}
 
