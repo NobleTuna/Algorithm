@@ -15,7 +15,6 @@ public class Solution {
 			int N = Integer.parseInt(br.readLine());
 			for (int i = 0; i < N; i++) {
 
-				
 				String input = br.readLine();
 				StringTokenizer st = new StringTokenizer(input);
 				int C = Integer.parseInt(st.nextToken());
