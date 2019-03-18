@@ -48,28 +48,127 @@ public class Solution {
 					if (map[i][j] == 1)
 						people.add(new Position(i, j, 0, 0));
 					else if (map[i][j] != 0)
-						stair[sIdx] = new Position(i, j, 0, map[i][j]);
+						stair[sIdx++] = new Position(i, j, 0, map[i][j]);
 				}
 			}
 			ans = Integer.MAX_VALUE;
 			///
+			dfs(new boolean[people.size()], 0);
 			System.out.println("#" + tc + " " + ans);
 		}
 	}
 
+	static class PP {
+		int len;
+		int target;
+
+		public PP(int len, int target) {
+			this.len = len;
+			this.target = target;
+		}
+	}
 
 	static int ans;
 	static List<Position> people;
 
-	
-
 	static Position stair[];
 
-	static void dfs(boolean [] chk, int idx) {
+	static void go(PP[] run) {
+
+		Queue<Integer> stairA = new LinkedList<>();
+		Queue<Integer> stairB = new LinkedList<>();
+		int depthA = stair[0].depth;
+		int depthB = stair[1].depth;
+
+		Queue<Integer> waitA = new LinkedList<>();
+		Queue<Integer> waitB = new LinkedList<>();
+		int cnt = 0;
+		int fieldPeople = run.length;
+
+		// 먼저 내려가는놈들을 체크
+		while (true) {
+
+			if (fieldPeople == 0 && stairA.isEmpty() && stairB.isEmpty() && waitA.isEmpty() && waitB.isEmpty()) {
+				ans = Math.min(ans, cnt);
+			}
+			cnt++;
+			if (!stairA.isEmpty()) {
+				for (int i = 0; i < stairA.size(); i++) {
+					int q = stairA.poll();
+					q--;
+					if (q == 0)
+						continue;
+					else
+						stairA.add(q);
+				}
+			}
+			if (!stairB.isEmpty()) {
+
+				for (int i = 0; i < stairB.size(); i++) {
+					int q = stairB.poll();
+					q--;
+					if (q == 0)
+						continue;
+					else
+						stairB.add(q);
+				}
+			}
+
+			/// 그담 대기중인놈들을 내려보냄
+			if (!waitA.isEmpty()) {
+				while (stairA.size() < 3) {
+					stairA.add(waitA.poll());
+				}
+			}
+			if (!waitB.isEmpty()) {
+				while (stairB.size() < 3) {
+					stairB.add(waitB.poll());
+				}
+			}
+
+			// 다음 나머지얘들을 움직이고 웨이트에 넣음
+
+			for (int i = 0; i < run.length; i++) {
+				if (run[i] == null)
+					continue;
+				else {
+					if (run[i].len - 1 == 0) {
+						run[i] = null;
+						fieldPeople--;
+						if (run[i].target == 0) {
+							waitA.add(depthA);
+						} else if (run[i].target == 1) {
+							waitB.add(depthB);
+						}
+					} else {
+						run[i] = new PP(run[i].len - 1, run[i].target);
+					}
+				}
+			}
+		}
+	}
+
+	static void dfs(boolean[] chk, int idx) {
+
+		PP[] run = new PP[chk.length];
 
 		if (idx == chk.length) {
-			if(chk[idx]) //1번계단
-				
+			for (int i = 0; i < chk.length; i++) {
+
+				Position P = people.get(i);
+				int y = P.y;
+				int x = P.x;
+
+				if (chk[i]) // 0번계단
+				{
+					run[i] = new PP(Math.abs(P.y - stair[0].y) + Math.abs(P.x - stair[0].x), 0);
+
+				} else { // 1번계단
+					run[i] = new PP(Math.abs(P.y - stair[1].y) + Math.abs(P.x - stair[1].x), 1);
+				}
+			}
+			// 거리랑 타겟을 보내야함? 넹
+			go(run);
 			return;
 		}
 
