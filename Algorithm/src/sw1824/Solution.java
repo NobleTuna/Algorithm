@@ -4,10 +4,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.StringReader;
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 import java.util.Set;
 import java.util.StringTokenizer;
@@ -24,18 +22,6 @@ public class Solution {
 			C = Integer.parseInt(st.nextToken());
 
 			map = new char[R][C];
-			memoS = new ArrayList[R][C];
-			memoM = new ArrayList[R][C];
-			for (int i = 0; i < R; i++) {
-				for (int j = 0; j < C; j++) {
-					memoM[i][j] = new ArrayList<>();
-				}
-			}
-			for (int i = 0; i < R; i++) {
-				for (int j = 0; j < C; j++) {
-					memoS[i][j] = new ArrayList<>();
-				}
-			}
 
 			for (int i = 0; i < R; i++) {
 				map[i] = br.readLine().toCharArray();
@@ -62,8 +48,6 @@ public class Solution {
 
 	static char map[][];
 	static int R, C;
-	static List<Character> memoS[][]; // 방향
-	static List<Integer> memoM[][];
 
 	static class H {
 		int y;
@@ -109,13 +93,11 @@ public class Solution {
 //				}
 //			}
 			int before = set.size();
-			String input = String.valueOf(y) + String.valueOf(x) + String.valueOf(state) + String.valueOf(memory);
+			String input = y+" "+x+" "+state+" "+memory;
 			set.add(input);
 			if (before == set.size())
 				continue;
 
-			memoS[y][x].add(state);
-			memoM[y][x].add(memory);
 
 			switch (map[y][x]) {
 			case '<':
