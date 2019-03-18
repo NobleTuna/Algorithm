@@ -90,10 +90,13 @@ public class Solution {
 
 			if (fieldPeople == 0 && stairA.isEmpty() && stairB.isEmpty() && waitA.isEmpty() && waitB.isEmpty()) {
 				ans = Math.min(ans, cnt);
+				return;
 			}
+
 			cnt++;
 			if (!stairA.isEmpty()) {
-				for (int i = 0; i < stairA.size(); i++) {
+				int tmp = stairA.size();
+				for (int i = 0; i < tmp; i++) {
 					int q = stairA.poll();
 					q--;
 					if (q == 0)
@@ -103,8 +106,8 @@ public class Solution {
 				}
 			}
 			if (!stairB.isEmpty()) {
-
-				for (int i = 0; i < stairB.size(); i++) {
+				int tmp = stairB.size();
+				for (int i = 0; i < tmp; i++) {
 					int q = stairB.poll();
 					q--;
 					if (q == 0)
@@ -116,30 +119,32 @@ public class Solution {
 
 			/// 그담 대기중인놈들을 내려보냄
 			if (!waitA.isEmpty()) {
-				while (stairA.size() < 3) {
+				while (stairA.size() < 3 && !waitA.isEmpty()) {
 					stairA.add(waitA.poll());
 				}
 			}
 			if (!waitB.isEmpty()) {
-				while (stairB.size() < 3) {
+				while (stairB.size() < 3 && !waitB.isEmpty()) {
 					stairB.add(waitB.poll());
 				}
 			}
 
 			// 다음 나머지얘들을 움직이고 웨이트에 넣음
-
+			if (fieldPeople == 0)
+				continue;
 			for (int i = 0; i < run.length; i++) {
 				if (run[i] == null)
 					continue;
 				else {
 					if (run[i].len - 1 == 0) {
-						run[i] = null;
-						fieldPeople--;
+
 						if (run[i].target == 0) {
 							waitA.add(depthA);
 						} else if (run[i].target == 1) {
 							waitB.add(depthB);
 						}
+						run[i] = null;
+						fieldPeople--;
 					} else {
 						run[i] = new PP(run[i].len - 1, run[i].target);
 					}
