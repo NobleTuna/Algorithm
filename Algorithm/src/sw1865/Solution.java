@@ -1,4 +1,4 @@
-	package sw1806;
+	package sw1865;
 	
 	import java.io.BufferedReader;
 	import java.io.IOException;
