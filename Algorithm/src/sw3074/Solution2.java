@@ -18,27 +18,26 @@ public class Solution2 {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			int N = Integer.parseInt(st.nextToken());
 			M = Integer.parseInt(st.nextToken());
-
 			pass = new long[N];
 			for (int i = 0; i < N; i++) {
 				pass[i] = Integer.parseInt(br.readLine());
 			}
+			Arrays.sort(pass);
 
 			long max = pass[pass.length - 1] * M;
 			long min = 0;
-			long ans = 0;
+			long ans = max;
 
-			while (true) {
+			while (min <= max) {
 				long mid = (max + min) / 2;
 				long people = isSafe(mid);
-				if (min >= max) {
-					ans = min;
-					break;
-				}
 				if (people == M) {
 					ans = mid;
 					break;
-				} else if (people > M) {
+				} else if (people >= M) {
+					if(ans>mid)
+						ans = mid;
+						
 					max = mid - 1;
 				} else if (people < M) {
 					min = mid + 1;
@@ -51,7 +50,7 @@ public class Solution2 {
 	}
 
 	static long isSafe(long k) { // k 시간
-		long curPeople = 0L;
+		long curPeople = 0;
 		for (int i = 0; i < pass.length; i++) {
 
 			curPeople += (k / pass[i]);
