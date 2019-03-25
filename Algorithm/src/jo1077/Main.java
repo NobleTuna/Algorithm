@@ -5,13 +5,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.StringReader;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.StringTokenizer;
 
 public class Main {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		br= new BufferedReader(new StringReader(inputString));
+//		br= new BufferedReader(new StringReader(inputString));
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			int N = Integer.parseInt(st.nextToken());
 			int W = Integer.parseInt(st.nextToken());
@@ -23,16 +22,6 @@ public class Main {
 				arr[i][1] = Integer.parseInt(st.nextToken());
 			}
 			
-			
-//			Arrays.sort(arr, new Comparator<int[]>() {
-//
-//				@Override
-//				public int compare(int[] o1, int[] o2) {
-//					// TODO Auto-generated method stub
-//					return o1[0]-o2[0];
-//				}
-//			});
-//			
 			int[] bag = new int[W+1];
 			
 			int[] memo = new int [W+1];
@@ -50,9 +39,9 @@ public class Main {
 				
 				memo = bag.clone();
 				for(int j=w; j<W+1; j++) {
-					bag[j] = Math.max(memo[j], bag[j-w]+v);
+					bag[j] = Math.max(memo[j], memo[j-w]+v);
 				}
-				System.out.println(Arrays.toString(bag));
+//				System.out.println(Arrays.toString(bag));
 			}
 			
 			System.out.println(bag[W]);

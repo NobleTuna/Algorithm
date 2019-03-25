@@ -4,17 +4,18 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.StringReader;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Solution {
+public class Solution_dp {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-//		br = new BufferedReader(new StringReader(tmpString));
+		br = new BufferedReader(new StringReader(tmpString));
 
 		int T = Integer.parseInt(br.readLine());
 		for (int tc = 1; tc <= T; tc++) {
-			int[] money = new int[4];
+			money = new int[4]; // 1일, 한달, 3달, 1년
 			StringTokenizer st = new StringTokenizer(br.readLine());
 
 			for (int i = 0; i < 4; i++) {
@@ -28,42 +29,33 @@ public class Solution {
 				month[i] = Integer.parseInt(st.nextToken());
 			}
 
-			ans = money[3];
+			for (int i = 0; i < 12; i++) {
+				if (month[i] != 0)
+					month[i] = Math.min(month[i] * money[0], money[1]);
+			}
 
-			go(money, month, 0, 0);
+//			System.out.println(Arrays.toString(month));
+
+			ans = money[3];
+			go(0, 0, month);
 			System.out.println("#" + tc + " " + ans);
 
 		}
 	}
 
 	static int ans;
+	static int money[];
 
-	static void go(int[] money, int month[], int idx, int sum) {
+	public static void go(int sum, int idx, int[] month) {
 		if (idx >= 12) {
 			ans = Math.min(ans, sum);
 			return;
 		}
 
-		if (month[idx] != 0) {
+		go(sum + month[idx], idx + 1, month);
 
-			if (month[idx] * money[0] < money[1]) { // 1일권
-				go(money, month, idx + 1, sum + (month[idx] * money[0]));
-			} else { // 한달권
-				go(money, month, idx + 1, sum + money[1]);
-			}
-		}
 
-		boolean zero = true; 
-		for (int i = 0; i < 3; i++) {  //3달권 가능여부판단
-
-			if (idx + i < 12 && month[idx + i] != 0)
-				zero = false;
-		}
-		if (!zero)
-			go(money, month, idx + 3, sum + money[2]);
-		
-		if(month[idx]==0)		//그달 사람이 없으면 그냥넘김
-			go(money, month, idx+1, sum);
+		go(sum + money[2], idx + 3, month);
 
 	}
 
