@@ -3,6 +3,8 @@ package jo2283; //RGB
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -11,9 +13,6 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int N = Integer.parseInt(br.readLine());
 		int arr[][] = new int[N][3];
-
-		int house[] = new int[N];
-		int houseV[] = new int[N];
 
 		for (int i = 0; i < N; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
