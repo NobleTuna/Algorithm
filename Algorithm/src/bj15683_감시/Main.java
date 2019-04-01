@@ -1,10 +1,11 @@
 package bj15683_감시;
 
-import java.beans.Visibility;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.StringReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -31,6 +32,7 @@ public class Main {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//		br = new BufferedReader(new StringReader(TC2));
 
 		StringTokenizer st = new StringTokenizer(br.readLine());
 
@@ -51,6 +53,7 @@ public class Main {
 				}
 			}
 		}
+//		System.out.println(zero);
 		camera = list.size();
 		ans = Integer.MAX_VALUE;
 		go(0, 0, new boolean[R][C]);
@@ -90,8 +93,8 @@ public class Main {
 	static void go(int idx, int cnt, boolean[][] isCnt) {
 		// 리스트에서 카메라 하나씩 꺼내서 그 카메라의 경우의 수대로 체크하고 다음카메라로.
 		if (idx == camera) {
-
-			ans = Math.min(ans, cnt);
+//			System.out.println("cnt : " + cnt);
+			ans = Math.min(ans, zero - cnt);
 			return;
 		}
 
@@ -100,12 +103,18 @@ public class Main {
 		int y = c.y;
 		int x = c.x;
 		int type = c.state;
+//		System.out.println(y + " " + x + " state : " + type);
 
 		switch (type) {
 		case 1:
 			for (int i = 0; i < 4; i++) {
 				Queue<Position> recover = new LinkedList<Position>();
 				int sum = chk(y, x, i, isCnt, recover);
+//				System.out.println("type : "+type);
+//				for (int k = 0; k < isCnt.length; k++) {
+//					System.out.println(Arrays.toString(isCnt[k]));
+//				}
+//				System.out.println();
 				go(idx + 1, cnt + sum, isCnt);
 				while (!recover.isEmpty()) {
 					Position p = recover.poll();
@@ -118,10 +127,14 @@ public class Main {
 				Queue<Position> recover = new LinkedList<Position>();
 				int sum = 0;
 				for (int j = 0; j < type2[i].length; j++) {
-					sum = chk(y, x, j, isCnt, recover);
+					sum += chk(y, x, type2[i][j], isCnt, recover);
+//					System.out.println("type : "+type);
+//					for (int k = 0; k < isCnt.length; k++) {
+//						System.out.println(Arrays.toString(isCnt[k]));
+//					}
+//					System.out.println();
 				}
 				go(idx + 1, cnt + sum, isCnt);
-
 				while (!recover.isEmpty()) {
 					Position p = recover.poll();
 					isCnt[p.y][p.x] = false;
@@ -135,7 +148,12 @@ public class Main {
 				Queue<Position> recover = new LinkedList<Position>();
 				int sum = 0;
 				for (int j = 0; j < type3[i].length; j++) {
-					sum = chk(y, x, j, isCnt, recover);
+					sum += chk(y, x, type3[i][j], isCnt, recover);
+//					System.out.println("type : "+type);
+//					for (int k = 0; k < isCnt.length; k++) {
+//						System.out.println(Arrays.toString(isCnt[k]));
+//					}
+//					System.out.println();
 				}
 				go(idx + 1, cnt + sum, isCnt);
 
@@ -152,7 +170,12 @@ public class Main {
 				Queue<Position> recover = new LinkedList<Position>();
 				int sum = 0;
 				for (int j = 0; j < type4[i].length; j++) {
-					sum = chk(y, x, j, isCnt, recover);
+					sum += chk(y, x, type4[i][j], isCnt, recover);
+//					System.out.println("type : "+type);
+//					for(int k=0; k<isCnt.length; k++) {
+//						System.out.println(Arrays.toString(isCnt[k]));
+//					}
+//					System.out.println();
 				}
 				go(idx + 1, cnt + sum, isCnt);
 
@@ -167,7 +190,12 @@ public class Main {
 			Queue<Position> recover = new LinkedList<Position>();
 			int sum = 0;
 			for (int i = 0; i < 4; i++) {
-				sum = chk(y, x, i, isCnt, recover);
+				sum += chk(y, x, i, isCnt, recover);
+//				System.out.println("type : "+type);
+//				for (int k = 0; k < isCnt.length; k++) {
+//					System.out.println(Arrays.toString(isCnt[k]));
+//				}
+//				System.out.println();
 			}
 			go(idx + 1, cnt + sum, isCnt);
 			while (!recover.isEmpty()) {
@@ -184,4 +212,7 @@ public class Main {
 		return y < 0 || x < 0 || y >= R || x >= C;
 	}
 
+	static String TC1 = "4 6\r\n" + "0 0 0 0 0 0\r\n" + "0 0 0 0 0 0\r\n" + "0 0 1 0 6 0\r\n" + "0 0 0 0 0 0";
+	static String TC2 = "6 6\r\n" + "0 0 0 0 0 0\r\n" + "0 2 0 0 0 0\r\n" + "0 0 0 0 6 0\r\n" + "0 6 0 0 2 0\r\n"
+			+ "0 0 0 0 0 0\r\n" + "0 0 0 0 0 5";
 }
