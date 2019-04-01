@@ -20,7 +20,6 @@ public class Solution {
 
 	static List<Position> list;
 	static int N, M;
-	static int[][] map;
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -30,13 +29,11 @@ public class Solution {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			N = Integer.parseInt(st.nextToken());
 			M = Integer.parseInt(st.nextToken());
-			map = new int[N][N];
 			list = new ArrayList<>();
 			for (int i = 0; i < N; i++) {
 				st = new StringTokenizer(br.readLine());
 				for (int j = 0; j < N; j++) {
-					map[i][j] = Integer.parseInt(st.nextToken());
-					if (map[i][j] == 1)
+					if (Integer.parseInt(st.nextToken()) == 1)
 						list.add(new Position(i, j));
 				}
 			}
