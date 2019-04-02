@@ -60,6 +60,12 @@ public class Solution {
 				} else if (C == 4) {
 					turn4(dir);
 				}
+				
+//				System.out.println(Arrays.toString(M1));
+//				System.out.println(Arrays.toString(M2));
+//				System.out.println(Arrays.toString(M3));
+//				System.out.println(Arrays.toString(M4));
+//				System.out.println();
 			}
 
 			int ans = M1[0] + (M2[0] * 2) + (M3[0] * 4) + (M4[0] * 8);
