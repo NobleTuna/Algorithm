@@ -26,6 +26,7 @@ public class Solution {
 
 	static int ax, ay;
 	static int bx, by;
+	static int[] A, B;
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -36,8 +37,8 @@ public class Solution {
 			int M = Integer.parseInt(st.nextToken());
 			int AP = Integer.parseInt(st.nextToken());
 
-			int[] A = new int[M];
-			int[] B = new int[M];
+			A = new int[M];
+			B = new int[M];
 			st = new StringTokenizer(br.readLine());
 			for (int i = 0; i < M; i++) {
 				A[i] = Integer.parseInt(st.nextToken());
@@ -67,7 +68,6 @@ public class Solution {
 					return o2.P - o1.P;
 				}
 			});
-
 			ax = 1;
 			ay = 1;
 
@@ -89,6 +89,7 @@ public class Solution {
 				int idxA = 0;
 				int idxB = 0;
 
+				// 각각 범위 내 두번째 큰 기지국까지 저장
 				for (int i = 0; i < list.length; i++) {
 					if (Math.abs(list[i].x - ax) + Math.abs(list[i].y - ay) <= list[i].C) {
 						arrA[idxA++] = list[i];
@@ -105,16 +106,15 @@ public class Solution {
 					}
 				}
 
-				if (arrA[0] == arrB[0]) {
-//					System.out.println(ax+" "+ay+"       "+bx+" "+by+"  합 : "+(arrA[0].P + Math.max(arrA[1].P, arrB[1].P)) );
+				if (arrA[0] == arrB[0]) { // 둘의 최대 기지국이 같으면 큰거하나 + 둘의 두번째 큰것중 맥스값 넣음
 					sum += (arrA[0].P + Math.max(arrA[1].P, arrB[1].P));
-				} else {
+				} else { // 그렇지 않으면 둘의 가장 큰 첫번째 기지국껏들 더함 ( 없으면 위에서 0을 넣은 기지국이들어감)
 					sum += (arrA[0].P + arrB[0].P);
 				}
+
 				if (cnt == M)
 					break;
-				moveA(A[cnt]);
-				moveB(B[cnt]);
+				move(cnt);
 				cnt++;
 			}
 			System.out.println("#" + tc + " " + sum);
@@ -122,44 +122,41 @@ public class Solution {
 		}
 	}
 
-	static void moveA(int dir) {
-		if (dir == 0) {
-			return;
-
-		} else if (dir == 1) {
+	static void move(int cnt) {
+		int aDir = A[cnt];
+		int bDir = B[cnt];
+		switch (aDir) {
+		case 1:
 			ay--;
-			return;
-
-		} else if (dir == 2) {
+			break;
+		case 2:
 			ax++;
-			return;
-		} else if (dir == 3) {
+			break;
+		case 3:
 			ay++;
-			return;
-		} else if (dir == 4) {
+			break;
+		case 4:
 			ax--;
-			return;
+			break;
+		default:
+			break;
 		}
 
-	}
-
-	static void moveB(int dir) {
-		if (dir == 0) {
-			return;
-
-		} else if (dir == 1) {
+		switch (bDir) {
+		case 1:
 			by--;
-			return;
-
-		} else if (dir == 2) {
+			break;
+		case 2:
 			bx++;
-			return;
-		} else if (dir == 3) {
+			break;
+		case 3:
 			by++;
-			return;
-		} else if (dir == 4) {
+			break;
+		case 4:
 			bx--;
-			return;
+			break;
+		default:
+			break;
 		}
 
 	}
