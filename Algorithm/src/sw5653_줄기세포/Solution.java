@@ -1,4 +1,4 @@
-package sw5653;
+package sw5653_줄기세포;
 
 import java.io.BufferedReader;
 import java.io.IOException;
