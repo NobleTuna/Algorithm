@@ -18,9 +18,7 @@ public class Algo33_광주_2_위영웅 {
 
 //		br = new BufferedReader(new StringReader(TC));
 
-		int T = Integer.parseInt(br.readLine());
 //		System.out.println(T);
-		for (int tc = 1; tc <= T; tc++) {
 			// 시작첨 찾아줘야됨
 			// BFS 한쪽에서 출발해서 길을 따라가다가 분기하면 다 보냄.
 			// visted 체크안된거만
@@ -202,9 +200,8 @@ public class Algo33_광주_2_위영웅 {
 				ans = '4';
 			}
 			
-			System.out.println("#"+tc+" "+(targetY+1)+" "+(targetX+1)+" "+ans);
+			System.out.println((targetY+1)+" "+(targetX+1)+" "+ans);
 
-		}
 	}
 
 	static int[][] dir = { { 0, 0 }, { 2, 4 }, { 1, 4 }, { 1, 3 }, { 2, 3 } };

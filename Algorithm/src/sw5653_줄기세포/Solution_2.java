@@ -85,7 +85,7 @@ public class Solution_2 {
 					int generation = p.generation;
 					boolean isStart = p.isStart;
 
-					// 꺼냇는데 내자리에 다른놈이 이미있으면 컨티뉴
+					// 꺼냇는데 내자리에 다른놈이 이미있으면 컨티뉴, 죽은놈
 					System.out.println(map[y][x].age + "   " + age);
 					if (map[y][x].age != age) {
 						System.out.println("컨티뉴");

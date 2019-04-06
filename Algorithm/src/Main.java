@@ -14,22 +14,26 @@ public class Main {
 
 		int N = Integer.parseInt(br.readLine());
 
+		StringTokenizer st = new StringTokenizer(br.readLine());
+
 		int people = 1;
 
 		for (int i = 0; i < N; i++) {
 
-			list.add(Integer.parseInt(br.readLine()), people++);
+			list.add(Integer.parseInt(st.nextToken()), people++);
 		}
 
 //			System.out.println(list);
 
 		int ans = 0;
+		StringBuilder sb = new StringBuilder();
+		for (int i = list.size()-1; i >=0; i--) {
+			sb.append(list.get(i) + " ");
+//				ans += list.get(i) - list.get(i - 1);
 
-		for (int i = 1; i < list.size(); i++) {
-			ans += list.get(i) - list.get(i - 1);
 		}
 
-		System.out.println(ans);
+		System.out.println(sb);
 
 	}
 
