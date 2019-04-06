@@ -30,7 +30,7 @@ public class Solution {
 
 			go(arr, 0, 0, 0);
 			
-			List<Integer> list = new ArrayList<Integer>(set);
+			List<Integer> list = new ArrayList<Integer>(set);		
 
 			Collections.sort(list, Collections.reverseOrder());
 

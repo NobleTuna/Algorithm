@@ -14,7 +14,7 @@ public class Solution {
 			int N = sc.nextInt(); // 돌릴값 N
 			max = 0;
 			min = 0;
-			int Ans=99;
+			int Ans = 99;
 			for (int i = 0; i < 100; i++) { // 박스 입력
 				box[i] = sc.nextInt();
 				if (box[max] < box[i]) {
@@ -45,24 +45,25 @@ public class Solution {
 			} // 위치 정렬
 
 			for (int i = 0; i < box.length; i++) {
-				Answer[ --count[ box[i] - MIN] ] = box[i];
+				Answer[--count[box[i] - MIN]] = box[i];
 			}
 			for (int i = 0; i < N; i++) {
 				Answer[max]--;
 				Answer[min]++;
 				for (int j = 0; j < 50; j++) {
-					if (Answer[max] < Answer[99-j]) {
-						max = 99-j;
+					if (Answer[max] < Answer[99 - j]) {
+						max = 99 - j;
 					}
 					if (Answer[min] > Answer[j]) {
 						min = j;
 					}
-				}Ans =Answer[max]-Answer[min];
+				}
+				Ans = Answer[max] - Answer[min];
 				if (Ans <= 1) {
 					break;
 				}
 			}
-			System.out.println("#"+T+" "+Ans);
+			System.out.println("#" + T + " " + Ans);
 
 		}
 	}
