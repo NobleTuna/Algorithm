@@ -1,13 +1,15 @@
 package bfs;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 import java.util.Scanner;
 
 public class BFS {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner("7 8\r\n" + "1 2 1 3 2 4 2 5 4 6 5 6 6 7 3 7");
-
+		List<String> list = new ArrayList<String>(){{add("aaa");}};
 		int V = sc.nextInt();// 정점
 		int E = sc.nextInt(); // 간선
 		int[][] adj = new int[V + 1][V + 1]; // 정점의 번호가 1번부터 7번.
