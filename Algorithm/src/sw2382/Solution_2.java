@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.StringTokenizer;
 
@@ -68,7 +67,7 @@ public class Solution_2 {
 					}
 					// 세방향이상에서 오는거 체크해줘야함
 				}
-				list.sort(null);
+//				list.sort(null);??
 				
 				move();
 

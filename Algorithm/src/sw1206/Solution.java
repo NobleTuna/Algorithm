@@ -3,7 +3,6 @@ package sw1206;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Solution {
@@ -27,10 +26,10 @@ public class Solution {
 				int r1 = arr[i + 1];
 				int r2 = arr[i + 2];
 
-				int l = Integer.max(l1, l2);
-				int r = Integer.max(r1, r2);
+				int l = Math.max(l1, l2);
+				int r = Math.max(r1, r2);
 
-				int value = Integer.min(arr[i] - l, arr[i] - r);
+				int value = Math.min(arr[i] - l, arr[i] - r);
 				if (value > 0)
 					result += value;
 			}
