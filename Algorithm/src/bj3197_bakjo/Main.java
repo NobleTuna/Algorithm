@@ -1,4 +1,6 @@
 package bj3197_bakjo;
+// bfs 두개 터짐
+// 날짜 각각 계산한 이차원배열 생성후 이분탐색
 
 import java.io.BufferedReader;
 import java.io.IOException;
