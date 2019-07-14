@@ -1,4 +1,4 @@
-package ssafy_03_08_algoTest;
+package ssalgoTest;
 
 import java.util.Arrays;
 import java.util.Scanner;

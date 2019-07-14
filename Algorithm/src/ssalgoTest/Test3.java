@@ -1,4 +1,4 @@
-package ssafy_03_08_algoTest;
+package ssalgoTest;
 
 import java.io.BufferedReader;
 import java.io.IOException;
