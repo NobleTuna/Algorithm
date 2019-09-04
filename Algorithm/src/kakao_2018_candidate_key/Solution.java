@@ -2,6 +2,7 @@
 package kakao_2018_candidate_key;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
@@ -9,7 +10,7 @@ class Solution {
 	public int solution(String[][] relation) {
 		N = relation[0].length;
 		answers = new ArrayList<boolean[]>();
-
+		run(0, new boolean[N], relation);
 		int answer = 0;
 		return answer;
 	}
@@ -19,7 +20,7 @@ class Solution {
 
 	static public void run(int idx, boolean[] chk, String[][] relation) {
 		if (idx == N) {
-
+			chkKey(chk, relation);
 			return;
 		}
 
@@ -30,17 +31,16 @@ class Solution {
 	}
 
 	static public boolean chkKey(boolean[] chk, String[][] relation) {
-		// 포함 체크 필요
-		
-//		for(boolean[] answer : answers) {
-//			boolean chkBefore = true;
-//			for(int idx = 0; idx<answer.length; idx++) {
-//				if(answer[idx])
-//			}
-//		}
-		
-		
-		
+
+		for (boolean[] answer : answers) {
+			boolean[] arr = new boolean[chk.length];
+			for (int idx = 0; idx < answer.length; idx++) {
+				arr[idx] = (answer[idx] & chk[idx]);
+			}
+			if (Arrays.equals(arr, answer))
+				return false;
+		}
+
 		HashMap<String, Boolean> chkMap = new HashMap<String, Boolean>();
 		for (int i = 0; i < relation.length; i++) {
 			StringBuilder sb = new StringBuilder();
