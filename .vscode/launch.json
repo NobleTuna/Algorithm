@@ -1,0 +1,1974 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "bj9019_DSLR.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Algo31_광주_2_위영웅<Algorithm>",
+            "request": "launch",
+            "mainClass": "Algo31_광주_2_위영웅",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Algo33_광주_2_위영웅<Algorithm>",
+            "request": "launch",
+            "mainClass": "Algo33_광주_2_위영웅",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-BooleanTest<Algorithm>",
+            "request": "launch",
+            "mainClass": "BooleanTest",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-PrintTest<Algorithm>",
+            "request": "launch",
+            "mainClass": "PrintTest",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-BFS<Algorithm>",
+            "request": "launch",
+            "mainClass": "bfs.BFS",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-bj2178_dfs_bfs<Algorithm>",
+            "request": "launch",
+            "mainClass": "bfs.bj2178_dfs_bfs",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(1)",
+            "request": "launch",
+            "mainClass": "bj1012_organicCabbagg.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(2)",
+            "request": "launch",
+            "mainClass": "bj11048.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(3)",
+            "request": "launch",
+            "mainClass": "bj11508.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(4)",
+            "request": "launch",
+            "mainClass": "bj14503_로봇청소기.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(5)",
+            "request": "launch",
+            "mainClass": "bj14620_flowerRoad.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(6)",
+            "request": "launch",
+            "mainClass": "bj14889.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(7)",
+            "request": "launch",
+            "mainClass": "bj14890.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(8)",
+            "request": "launch",
+            "mainClass": "bj15683_감시.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(9)",
+            "request": "launch",
+            "mainClass": "bj15684_.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(10)",
+            "request": "launch",
+            "mainClass": "bj15686.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(11)",
+            "request": "launch",
+            "mainClass": "bj16234.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(12)",
+            "request": "launch",
+            "mainClass": "bj16235.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-test<Algorithm>",
+            "request": "launch",
+            "mainClass": "bj16235.test",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(13)",
+            "request": "launch",
+            "mainClass": "bj16236.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main2<Algorithm>",
+            "request": "launch",
+            "mainClass": "bj16236.Main2",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main_16236아기상어4<Algorithm>",
+            "request": "launch",
+            "mainClass": "bj16236.Main_16236아기상어4",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main_17069<Algorithm>",
+            "request": "launch",
+            "mainClass": "bj17069.Main_17069",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main_memo<Algorithm>",
+            "request": "launch",
+            "mainClass": "bj17069.Main_memo",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(14)",
+            "request": "launch",
+            "mainClass": "bj17070.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(15)",
+            "request": "launch",
+            "mainClass": "bj17071__.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(16)",
+            "request": "launch",
+            "mainClass": "bj17135_캐슬디펜스.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(17)",
+            "request": "launch",
+            "mainClass": "bj17136_색종이.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(18)",
+            "request": "launch",
+            "mainClass": "bj17140_이차원배열과연산.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(19)",
+            "request": "launch",
+            "mainClass": "bj17142.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(20)",
+            "request": "launch",
+            "mainClass": "bj17143_낚시왕.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(21)",
+            "request": "launch",
+            "mainClass": "bj17144_미세먼지.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(22)",
+            "request": "launch",
+            "mainClass": "bj2156.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Dfs<Algorithm>",
+            "request": "launch",
+            "mainClass": "bj2178.Dfs",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(23)",
+            "request": "launch",
+            "mainClass": "bj2178.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main2<Algorithm>(1)",
+            "request": "launch",
+            "mainClass": "bj2178.Main2",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(24)",
+            "request": "launch",
+            "mainClass": "bj2458.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main2<Algorithm>(2)",
+            "request": "launch",
+            "mainClass": "bj2458.Main2",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main3<Algorithm>",
+            "request": "launch",
+            "mainClass": "bj2458.Main3",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-키순서_김선일<Algorithm>",
+            "request": "launch",
+            "mainClass": "bj2458.키순서_김선일",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-키순서_김하늘<Algorithm>",
+            "request": "launch",
+            "mainClass": "bj2458.키순서_김하늘",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-키순서_류승환<Algorithm>",
+            "request": "launch",
+            "mainClass": "bj2458.키순서_류승환",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-키순서_문은진<Algorithm>",
+            "request": "launch",
+            "mainClass": "bj2458.키순서_문은진",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-키순서_박성하<Algorithm>",
+            "request": "launch",
+            "mainClass": "bj2458.키순서_박성하",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-키순서_이수현<Algorithm>",
+            "request": "launch",
+            "mainClass": "bj2458.키순서_이수현",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(25)",
+            "request": "launch",
+            "mainClass": "bj2563.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(26)",
+            "request": "launch",
+            "mainClass": "bj2579.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(27)",
+            "request": "launch",
+            "mainClass": "bj2644.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(28)",
+            "request": "launch",
+            "mainClass": "bj2698.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(29)",
+            "request": "launch",
+            "mainClass": "bj2804.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(30)",
+            "request": "launch",
+            "mainClass": "bj2839.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(31)",
+            "request": "launch",
+            "mainClass": "bj2851.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(32)",
+            "request": "launch",
+            "mainClass": "bj2960.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(33)",
+            "request": "launch",
+            "mainClass": "bj3197_bakjo.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(34)",
+            "request": "launch",
+            "mainClass": "bj5373.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(35)",
+            "request": "launch",
+            "mainClass": "bj7569.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(36)",
+            "request": "launch",
+            "mainClass": "bj7576.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main_T<Algorithm>",
+            "request": "launch",
+            "mainClass": "bj7576.Main_T",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(37)",
+            "request": "launch",
+            "mainClass": "bj8320.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(38)",
+            "request": "launch",
+            "mainClass": "bj9320_openSafe.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Algo2_광주_2_위영웅<Algorithm>",
+            "request": "launch",
+            "mainClass": "dfs.Algo2_광주_2_위영웅",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Combi<Algorithm>",
+            "request": "launch",
+            "mainClass": "dfs.Combi",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Dfs<Algorithm>(1)",
+            "request": "launch",
+            "mainClass": "dfs.Dfs",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Ez_perm<Algorithm>",
+            "request": "launch",
+            "mainClass": "dfs.Ez_perm",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-N_queen<Algorithm>",
+            "request": "launch",
+            "mainClass": "dfs.N_queen",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Permutation<Algorithm>",
+            "request": "launch",
+            "mainClass": "dfs.Permutation",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Pratice_perm<Algorithm>",
+            "request": "launch",
+            "mainClass": "dfs.Pratice_perm",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Set<Algorithm>",
+            "request": "launch",
+            "mainClass": "dfs.Set",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Sw4008_IF_Dfs<Algorithm>",
+            "request": "launch",
+            "mainClass": "dfs.Sw4008_IF_Dfs",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(39)",
+            "request": "launch",
+            "mainClass": "jo1053.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-SolutionT<Algorithm>",
+            "request": "launch",
+            "mainClass": "jo1053.SolutionT",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(40)",
+            "request": "launch",
+            "mainClass": "jo1077.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(41)",
+            "request": "launch",
+            "mainClass": "jo1239.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(42)",
+            "request": "launch",
+            "mainClass": "jo1350.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(43)",
+            "request": "launch",
+            "mainClass": "jo1462.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main_dfs<Algorithm>",
+            "request": "launch",
+            "mainClass": "jo1462.Main_dfs",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main2<Algorithm>(3)",
+            "request": "launch",
+            "mainClass": "jo1545_bitmask_returnHandler.Main2",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main_T<Algorithm>(1)",
+            "request": "launch",
+            "mainClass": "jo1545_bitmask_returnHandler.Main_T",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main_memo<Algorithm>(1)",
+            "request": "launch",
+            "mainClass": "jo1545_bitmask_returnHandler.Main_memo",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(44)",
+            "request": "launch",
+            "mainClass": "jo1681.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(45)",
+            "request": "launch",
+            "mainClass": "jo1828.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main2<Algorithm>(4)",
+            "request": "launch",
+            "mainClass": "jo1828.Main2",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(46)",
+            "request": "launch",
+            "mainClass": "jo1840.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(47)",
+            "request": "launch",
+            "mainClass": "jo1863.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(48)",
+            "request": "launch",
+            "mainClass": "jo2097.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(49)",
+            "request": "launch",
+            "mainClass": "jo2283.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(50)",
+            "request": "launch",
+            "mainClass": "jo2577.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<Algorithm>(51)",
+            "request": "launch",
+            "mainClass": "jo2634.Main",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main2<Algorithm>(5)",
+            "request": "launch",
+            "mainClass": "jo2634.Main2",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>",
+            "request": "launch",
+            "mainClass": "kakao_2018_FailureRate.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(1)",
+            "request": "launch",
+            "mainClass": "kakao_2018_candidate_key.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(2)",
+            "request": "launch",
+            "mainClass": "kakao_2018_openChat.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MyCode<Algorithm>",
+            "request": "launch",
+            "mainClass": "lineS_1.MyCode",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MyCode<Algorithm>(1)",
+            "request": "launch",
+            "mainClass": "lineS_2.MyCode",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MyCode<Algorithm>(2)",
+            "request": "launch",
+            "mainClass": "lineS_3.MyCode",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MyCode2<Algorithm>",
+            "request": "launch",
+            "mainClass": "lineS_3.MyCode2",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test2<Algorithm>",
+            "request": "launch",
+            "mainClass": "ssalgoTest.Test2",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test3<Algorithm>",
+            "request": "launch",
+            "mainClass": "ssalgoTest.Test3",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(3)",
+            "request": "launch",
+            "mainClass": "sw1204.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(4)",
+            "request": "launch",
+            "mainClass": "sw1206.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution2<Algorithm>",
+            "request": "launch",
+            "mainClass": "sw1206.Solution2",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(5)",
+            "request": "launch",
+            "mainClass": "sw1208.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution2<Algorithm>(1)",
+            "request": "launch",
+            "mainClass": "sw1208.Solution2",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(6)",
+            "request": "launch",
+            "mainClass": "sw1209.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(7)",
+            "request": "launch",
+            "mainClass": "sw1213.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(8)",
+            "request": "launch",
+            "mainClass": "sw1215.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(9)",
+            "request": "launch",
+            "mainClass": "sw1216.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(10)",
+            "request": "launch",
+            "mainClass": "sw1217.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(11)",
+            "request": "launch",
+            "mainClass": "sw1220.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(12)",
+            "request": "launch",
+            "mainClass": "sw1221.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(13)",
+            "request": "launch",
+            "mainClass": "sw1225.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution2<Algorithm>(2)",
+            "request": "launch",
+            "mainClass": "sw1225.Solution2",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(14)",
+            "request": "launch",
+            "mainClass": "sw1228.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(15)",
+            "request": "launch",
+            "mainClass": "sw1230.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(16)",
+            "request": "launch",
+            "mainClass": "sw1233.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(17)",
+            "request": "launch",
+            "mainClass": "sw1234.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(18)",
+            "request": "launch",
+            "mainClass": "sw1240_.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(19)",
+            "request": "launch",
+            "mainClass": "sw1244.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution2<Algorithm>(3)",
+            "request": "launch",
+            "mainClass": "sw1244.Solution2",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(20)",
+            "request": "launch",
+            "mainClass": "sw1247.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-SolutionT<Algorithm>(1)",
+            "request": "launch",
+            "mainClass": "sw1247.SolutionT",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-dfs<Algorithm>",
+            "request": "launch",
+            "mainClass": "sw1247.dfs",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(21)",
+            "request": "launch",
+            "mainClass": "sw1249.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution2<Algorithm>(4)",
+            "request": "launch",
+            "mainClass": "sw1249.Solution2",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(22)",
+            "request": "launch",
+            "mainClass": "sw1251_.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(23)",
+            "request": "launch",
+            "mainClass": "sw1258.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(24)",
+            "request": "launch",
+            "mainClass": "sw1266.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(25)",
+            "request": "launch",
+            "mainClass": "sw1284.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(26)",
+            "request": "launch",
+            "mainClass": "sw1287.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(27)",
+            "request": "launch",
+            "mainClass": "sw1288.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(28)",
+            "request": "launch",
+            "mainClass": "sw1493.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(29)",
+            "request": "launch",
+            "mainClass": "sw1494.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(30)",
+            "request": "launch",
+            "mainClass": "sw1824.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution2<Algorithm>(5)",
+            "request": "launch",
+            "mainClass": "sw1824.Solution2",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution3<Algorithm>",
+            "request": "launch",
+            "mainClass": "sw1824.Solution3",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution4<Algorithm>",
+            "request": "launch",
+            "mainClass": "sw1824.Solution4",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(31)",
+            "request": "launch",
+            "mainClass": "sw1859.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(32)",
+            "request": "launch",
+            "mainClass": "sw1861.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution2<Algorithm>(6)",
+            "request": "launch",
+            "mainClass": "sw1861.Solution2",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(33)",
+            "request": "launch",
+            "mainClass": "sw1865.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(34)",
+            "request": "launch",
+            "mainClass": "sw1868.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(35)",
+            "request": "launch",
+            "mainClass": "sw1873.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(36)",
+            "request": "launch",
+            "mainClass": "sw1926.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(37)",
+            "request": "launch",
+            "mainClass": "sw1928.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(38)",
+            "request": "launch",
+            "mainClass": "sw1940.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(39)",
+            "request": "launch",
+            "mainClass": "sw1945.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(40)",
+            "request": "launch",
+            "mainClass": "sw1946.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(41)",
+            "request": "launch",
+            "mainClass": "sw1948.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(42)",
+            "request": "launch",
+            "mainClass": "sw1949.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(43)",
+            "request": "launch",
+            "mainClass": "sw1952.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution_dp<Algorithm>",
+            "request": "launch",
+            "mainClass": "sw1952.Solution_dp",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(44)",
+            "request": "launch",
+            "mainClass": "sw1953_탈주범.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(45)",
+            "request": "launch",
+            "mainClass": "sw1954.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(46)",
+            "request": "launch",
+            "mainClass": "sw1959.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(47)",
+            "request": "launch",
+            "mainClass": "sw1961.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(48)",
+            "request": "launch",
+            "mainClass": "sw1966.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(49)",
+            "request": "launch",
+            "mainClass": "sw1970.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(50)",
+            "request": "launch",
+            "mainClass": "sw1974.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(51)",
+            "request": "launch",
+            "mainClass": "sw1976.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(52)",
+            "request": "launch",
+            "mainClass": "sw1979.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(53)",
+            "request": "launch",
+            "mainClass": "sw1983.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(54)",
+            "request": "launch",
+            "mainClass": "sw1984.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(55)",
+            "request": "launch",
+            "mainClass": "sw1986.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(56)",
+            "request": "launch",
+            "mainClass": "sw1989.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(57)",
+            "request": "launch",
+            "mainClass": "sw2001.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(58)",
+            "request": "launch",
+            "mainClass": "sw2005.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(59)",
+            "request": "launch",
+            "mainClass": "sw2007.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(60)",
+            "request": "launch",
+            "mainClass": "sw2105_디저트.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(61)",
+            "request": "launch",
+            "mainClass": "sw2112_필름.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(62)",
+            "request": "launch",
+            "mainClass": "sw2115.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(63)",
+            "request": "launch",
+            "mainClass": "sw2117_방범.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(64)",
+            "request": "launch",
+            "mainClass": "sw2382.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution_2<Algorithm>",
+            "request": "launch",
+            "mainClass": "sw2382.Solution_2",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution_han<Algorithm>",
+            "request": "launch",
+            "mainClass": "sw2382.Solution_han",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(65)",
+            "request": "launch",
+            "mainClass": "sw2383.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(66)",
+            "request": "launch",
+            "mainClass": "sw2477.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(67)",
+            "request": "launch",
+            "mainClass": "sw2805.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(68)",
+            "request": "launch",
+            "mainClass": "sw2806.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution2<Algorithm>(7)",
+            "request": "launch",
+            "mainClass": "sw2806.Solution2",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution3<Algorithm>(1)",
+            "request": "launch",
+            "mainClass": "sw2806.Solution3",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(69)",
+            "request": "launch",
+            "mainClass": "sw2817.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(70)",
+            "request": "launch",
+            "mainClass": "sw2819.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(71)",
+            "request": "launch",
+            "mainClass": "sw3074.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution2<Algorithm>(8)",
+            "request": "launch",
+            "mainClass": "sw3074.Solution2",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-SolutionDobby<Algorithm>",
+            "request": "launch",
+            "mainClass": "sw3074.SolutionDobby",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-SolutionR<Algorithm>",
+            "request": "launch",
+            "mainClass": "sw3074.SolutionR",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-SolutionT<Algorithm>(2)",
+            "request": "launch",
+            "mainClass": "sw3074.SolutionT",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Kruskal<Algorithm>",
+            "request": "launch",
+            "mainClass": "sw3124_kruskal.Kruskal",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Kurskal2<Algorithm>",
+            "request": "launch",
+            "mainClass": "sw3124_kruskal.Kurskal2",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(72)",
+            "request": "launch",
+            "mainClass": "sw3124_kruskal.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution_Kruskal<Algorithm>",
+            "request": "launch",
+            "mainClass": "sw3124_kruskal.Solution_Kruskal",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution_Prim<Algorithm>",
+            "request": "launch",
+            "mainClass": "sw3124_kruskal.Solution_Prim",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(73)",
+            "request": "launch",
+            "mainClass": "sw3131.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(74)",
+            "request": "launch",
+            "mainClass": "sw3142.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(75)",
+            "request": "launch",
+            "mainClass": "sw3143.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(76)",
+            "request": "launch",
+            "mainClass": "sw3233.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(77)",
+            "request": "launch",
+            "mainClass": "sw3234.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(78)",
+            "request": "launch",
+            "mainClass": "sw3260.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(79)",
+            "request": "launch",
+            "mainClass": "sw3282.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution_dfs<Algorithm>",
+            "request": "launch",
+            "mainClass": "sw3282.Solution_dfs",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(80)",
+            "request": "launch",
+            "mainClass": "sw3289.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(81)",
+            "request": "launch",
+            "mainClass": "sw3304.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(82)",
+            "request": "launch",
+            "mainClass": "sw3307.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(83)",
+            "request": "launch",
+            "mainClass": "sw3308.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution_T<Algorithm>",
+            "request": "launch",
+            "mainClass": "sw3308.Solution_T",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(84)",
+            "request": "launch",
+            "mainClass": "sw3314.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(85)",
+            "request": "launch",
+            "mainClass": "sw3376.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(86)",
+            "request": "launch",
+            "mainClass": "sw3378_스타일리쉬.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(87)",
+            "request": "launch",
+            "mainClass": "sw3421.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(88)",
+            "request": "launch",
+            "mainClass": "sw3431.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(89)",
+            "request": "launch",
+            "mainClass": "sw3459.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(90)",
+            "request": "launch",
+            "mainClass": "sw3499.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(91)",
+            "request": "launch",
+            "mainClass": "sw3752.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(92)",
+            "request": "launch",
+            "mainClass": "sw3809.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(93)",
+            "request": "launch",
+            "mainClass": "sw4008.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution2<Algorithm>(9)",
+            "request": "launch",
+            "mainClass": "sw4008.Solution2",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(94)",
+            "request": "launch",
+            "mainClass": "sw4012.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(95)",
+            "request": "launch",
+            "mainClass": "sw4013.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(96)",
+            "request": "launch",
+            "mainClass": "sw4014_활주로.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(97)",
+            "request": "launch",
+            "mainClass": "sw4047.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(98)",
+            "request": "launch",
+            "mainClass": "sw4261.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(99)",
+            "request": "launch",
+            "mainClass": "sw4299.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(100)",
+            "request": "launch",
+            "mainClass": "sw4301.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(101)",
+            "request": "launch",
+            "mainClass": "sw4340_.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(102)",
+            "request": "launch",
+            "mainClass": "sw4371.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(103)",
+            "request": "launch",
+            "mainClass": "sw4406.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(104)",
+            "request": "launch",
+            "mainClass": "sw4408.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution2<Algorithm>(10)",
+            "request": "launch",
+            "mainClass": "sw4408.Solution2",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(105)",
+            "request": "launch",
+            "mainClass": "sw4466.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(106)",
+            "request": "launch",
+            "mainClass": "sw4530.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(107)",
+            "request": "launch",
+            "mainClass": "sw4672.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(108)",
+            "request": "launch",
+            "mainClass": "sw4676.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(109)",
+            "request": "launch",
+            "mainClass": "sw4751.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(110)",
+            "request": "launch",
+            "mainClass": "sw4789.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(111)",
+            "request": "launch",
+            "mainClass": "sw4796.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(112)",
+            "request": "launch",
+            "mainClass": "sw5162.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(113)",
+            "request": "launch",
+            "mainClass": "sw5213.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(114)",
+            "request": "launch",
+            "mainClass": "sw5215.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(115)",
+            "request": "launch",
+            "mainClass": "sw5356.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(116)",
+            "request": "launch",
+            "mainClass": "sw5431.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(117)",
+            "request": "launch",
+            "mainClass": "sw5515.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(118)",
+            "request": "launch",
+            "mainClass": "sw5549.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(119)",
+            "request": "launch",
+            "mainClass": "sw5601.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(120)",
+            "request": "launch",
+            "mainClass": "sw5603.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(121)",
+            "request": "launch",
+            "mainClass": "sw5607.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(122)",
+            "request": "launch",
+            "mainClass": "sw5644.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(123)",
+            "request": "launch",
+            "mainClass": "sw5648.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(124)",
+            "request": "launch",
+            "mainClass": "sw5650.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution_loop<Algorithm>",
+            "request": "launch",
+            "mainClass": "sw5650.Solution_loop",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution_2<Algorithm>(1)",
+            "request": "launch",
+            "mainClass": "sw5653_줄기세포.Solution_2",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(125)",
+            "request": "launch",
+            "mainClass": "sw5656.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(126)",
+            "request": "launch",
+            "mainClass": "sw5658.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(127)",
+            "request": "launch",
+            "mainClass": "sw5789.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(128)",
+            "request": "launch",
+            "mainClass": "sw5948.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(129)",
+            "request": "launch",
+            "mainClass": "sw5953_newNumRuls.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(130)",
+            "request": "launch",
+            "mainClass": "sw5986.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution_2<Algorithm>(2)",
+            "request": "launch",
+            "mainClass": "sw5986.Solution_2",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(131)",
+            "request": "launch",
+            "mainClass": "sw6057.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution_fail<Algorithm>",
+            "request": "launch",
+            "mainClass": "sw6057.Solution_fail",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(132)",
+            "request": "launch",
+            "mainClass": "sw6109_.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(133)",
+            "request": "launch",
+            "mainClass": "sw6485.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution2<Algorithm>(11)",
+            "request": "launch",
+            "mainClass": "sw6485.Solution2",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(134)",
+            "request": "launch",
+            "mainClass": "sw6692.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(135)",
+            "request": "launch",
+            "mainClass": "sw6730.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(136)",
+            "request": "launch",
+            "mainClass": "sw6808.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(137)",
+            "request": "launch",
+            "mainClass": "sw6853.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(138)",
+            "request": "launch",
+            "mainClass": "sw6900.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(139)",
+            "request": "launch",
+            "mainClass": "sw6913_.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(140)",
+            "request": "launch",
+            "mainClass": "sw6917.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(141)",
+            "request": "launch",
+            "mainClass": "sw7087.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(142)",
+            "request": "launch",
+            "mainClass": "sw7088.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(143)",
+            "request": "launch",
+            "mainClass": "sw7102.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(144)",
+            "request": "launch",
+            "mainClass": "sw7227.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(145)",
+            "request": "launch",
+            "mainClass": "sw7250.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(146)",
+            "request": "launch",
+            "mainClass": "sw7272.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(147)",
+            "request": "launch",
+            "mainClass": "sw7338.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<Algorithm>(148)",
+            "request": "launch",
+            "mainClass": "일분배.Solution",
+            "projectName": "Algorithm"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-키순서_신아영<Algorithm>",
+            "request": "launch",
+            "mainClass": "키순서_신아영",
+            "projectName": "Algorithm"
+        }
+    ]
+}
