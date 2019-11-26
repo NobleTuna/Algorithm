@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.StringReader;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Solution {
@@ -32,6 +33,7 @@ public class Solution {
 			int[] memory = new int[M];
 			int memoryPointer = 0;
 			int commandPointer = 0;
+			int charPointer = 0;
 			int count = 0;
 			boolean isLoof = false;
 
@@ -96,7 +98,8 @@ public class Solution {
 								}
 							}
 						}
-					}
+					} else
+						commandPointer++;
 
 					break;
 				case ']':
@@ -114,19 +117,55 @@ public class Solution {
 								}
 							}
 						}
-					}
+					} else
+						commandPointer++;
 					break;
 				case '.':
+					commandPointer++;
 					break;
 				case ',':
+					int inputChar = 0;
+					if (charPointer == I)
+						inputChar = 255;
+					else
+						inputChar = messageArr[charPointer++];
+
+					memory[memoryPointer] = inputChar;
+					commandPointer++;
 					break;
 				default:
 					break;
 				}
 
 			}
+
+			if (isLoof) {
+				System.out.println(Arrays.toString(loofChk));
+				int max = 0;
+				int maxIdx = 0;
+				int secondMax = 0;
+				int secondMaxIdx = 0;
+				for (int i = 0; i < loofChk.length; i++) {
+					if (max < loofChk[i]) {
+						max = loofChk[i];
+						maxIdx = i;
+					}
+				}
+				for (int i = 0; i < loofChk.length; i++) {
+					if (secondMax < loofChk[i] && i != maxIdx) {
+						secondMax = loofChk[i];
+						secondMaxIdx = i;
+					}
+				}
+
+				System.out.println("Loops " + secondMaxIdx + " " + maxIdx);
+			} else
+				System.out.println("Terminates");
 		}
 	}
 
-	static String TC = "";
+	static String TC = "4\r\n" + "10 4 3\r\n" + "+-.,\r\n" + "qwe\r\n" + "1000 5 1\r\n" + "+[+-]\r\n" + "a\r\n"
+			+ "100 74 4\r\n" + "+++++[->++<]>[-<+++++++>]<[->+>+>+>+<<<<]>+++>--->++++++++++>---<<<.>.>.>.\r\n"
+			+ "xxyz\r\n" + "9999 52 14\r\n" + "+++++[>+++++++++<-],+[-[>--.++>+<<-]>+.->[<.>-]<<,+]\r\n"
+			+ "this_is_a_test";
 }
