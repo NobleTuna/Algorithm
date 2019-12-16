@@ -1,7 +1,9 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
-import java.util.Set;
+import java.util.Queue;
+import java.util.Stack;
 
 public class ListTest {
 
@@ -45,6 +47,11 @@ public class ListTest {
 		List<String> sList = new ArrayList<String>();
 		sList.add("kk");
 
+		Queue<String> q = new LinkedList<String>();
+		Stack<String> ss = new Stack<String>();
+
+		String[] garbage = new String[3];
+		garbage = new String[] { "가 나 ", "다 라" };
 	}
 
 }
