@@ -6,6 +6,6 @@
 .idea
 .vscode
 *.iml
-src/.project
+Algorithm/.project
 out
 gen
