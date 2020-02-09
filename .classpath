@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="sw5653_줄기세포/" kind="src" path="Algorithm/src"/>
+	<classpathentry kind="src" path="Algorithm/src/sw5653_줄기세포"/>
+	<classpathentry kind="output" path="Algorithm/bin"/>
+</classpath>
