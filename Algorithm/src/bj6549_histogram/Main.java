@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.StringReader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -14,6 +13,8 @@ public class Main {
 	static long answer;
 
 	static int leafNodeS;
+
+	static int[] input = new int[400001];
 
 	static int[] from = new int[400001];
 
@@ -30,11 +31,6 @@ public class Main {
 		br = new BufferedReader(new StringReader(TC3));
 
 		while (true) {
-			for (int i = 0; i < tree.length; i++) {
-
-				tree[i] = INF;
-
-			}
 
 			answer = 0;
 
@@ -45,6 +41,11 @@ public class Main {
 			if (N == 0)
 				break;
 
+			for (int i = 0; i < N * 4; i++) {
+				input[i] = INF;
+				tree[i] = 0;
+
+			}
 			for (int ts = 1; ts < N; ts *= 2) {
 
 				leafNodeS = ts;
@@ -62,8 +63,9 @@ public class Main {
 			for (int i = leafNodeS; i < leafNodeS + N; i++) {
 
 				int num = Integer.parseInt(st.nextToken());
+				input[i] = num;
 
-				tree[i] = num;
+				tree[i] = i;
 
 				from[i] = idx;
 
@@ -77,7 +79,7 @@ public class Main {
 
 			for (int i = leafNodeS - 1; i > 0; i--) {
 //				System.out.println(i);
-				tree[i] = (tree[i * 2] < tree[i * 2 + 1]) ? i * 2 : i * 2 + 1;
+				tree[i] = (input[tree[i * 2]] < input[tree[i * 2 + 1]]) ? tree[i * 2] : tree[i * 2 + 1];
 
 				from[i] = from[i * 2];
 
@@ -87,28 +89,22 @@ public class Main {
 					to[i] = to[i * 2 + 1];
 
 			}
-			/**
-			 * // 탐색부분 잘못됨 for (int i = 1; i < End; i++) { if (tree[i] != Integer.MAX_VALUE)
-			 * answer = Math.max((to[i] - from[i] + 1) * tree[i], answer);
-			 * 
-			 * }
-			 **/
 
 			System.out.print("TREE ");
 			for (int i = 0; i < 18; i++) {
 				System.out.print(tree[i] + " ");
 			}
-			System.out.println();
-			for (int i = 0; i < 18; i++) {
-				System.out.print(from[i] + " ");
-			}
+//			System.out.println();
+//			for (int i = 0; i < 18; i++) {
+//				System.out.print(from[i] + " ");
+//			}
 //			System.out.println();
 //			for (int i = 0; i < 18; i++) {
 //				System.out.print(to[i] + " ");
 //			}
 			System.out.println();
 //			System.out.println(Arrays.toString(to));
-			System.out.println("calc : " + calc(1, 4, 1));
+			System.out.println("calc : " + calc(4, 5));
 //			System.out.println(answer);
 
 		}
@@ -117,31 +113,40 @@ public class Main {
 	/**
 	 * 
 	 * @param start 찾을 범위 시작점
-	 * @param end 찾을 범위 끝점
-	 * @param idx 현재 인덱스
+	 * @param end   찾을 범위 끝점
+	 * @param idx   현재 인덱스
 	 * @return 최소값 인덱스 리턴 (tree[] 값)
 	 */
-	public static int calc(int start, int end, int idx) {
+	public static int calc(int start, int end) {
 
-		if (idx >= 400001 || idx < 0)
-			return 0;
-
-		if (start <= from[idx] && to[idx] <= end) {
-//			System.out.println("return" + tree[idx]);
-			return tree[idx];
+		start += leafNodeS - 1;
+		end += leafNodeS - 1;
+		int minValue = Integer.MAX_VALUE;
+		int rtn = 0;
+		while (start < end) {
+			if (start % 2 == 1) {
+				if (minValue > input[tree[start]]) {
+					minValue = input[tree[start]];
+					rtn = tree[start];
+				}
+				start++;
+			}
+			if (end % 2 == 0) {
+				if (minValue > input[tree[end]]) {
+					minValue = input[tree[end]];
+					rtn = tree[end];
+				}
+				end--;
+			}
+			start /= 2;
+			end /= 2;
+			if (start == end) {
+				if (minValue > input[tree[end]]) {
+					return tree[end];
+				}
+			}
 		}
-
-		int leftValue = 0;
-		int rightValue = 0;
-		if (start > from[idx])
-			leftValue = calc(start, end, idx * 2 + 1);
-
-		if (end < to[idx])
-			rightValue = calc(start, end, idx * 2);
-
-//		System.out.println("left: " + leftValue);
-//		System.out.println("right: " + rightValue);
-		return Math.min(tree[leftValue], tree[rightValue]);
+		return rtn;
 
 	}
 
