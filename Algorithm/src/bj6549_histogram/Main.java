@@ -3,7 +3,6 @@ package bj6549_histogram;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.StringReader;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -16,10 +15,6 @@ public class Main {
 
 	static int[] input = new int[400001];
 
-	static int[] from = new int[400001];
-
-	static int[] to = new int[400001];
-
 	static int[] tree = new int[400001];
 
 	static int End;
@@ -27,8 +22,6 @@ public class Main {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
-		br = new BufferedReader(new StringReader(TC3));
 
 		while (true) {
 
@@ -41,7 +34,7 @@ public class Main {
 			if (N == 0)
 				break;
 
-			for (int i = 0; i < N * 4; i++) {
+			for (int i = 0; i < input.length; i++) {
 				input[i] = INF;
 				tree[i] = 0;
 
@@ -56,9 +49,7 @@ public class Main {
 
 //			System.out.println(leafNodeS);
 
-			End = leafNodeS + N;
-
-			int idx = 1;
+			End = leafNodeS + N - 1;
 
 			for (int i = leafNodeS; i < leafNodeS + N; i++) {
 
@@ -66,12 +57,6 @@ public class Main {
 				input[i] = num;
 
 				tree[i] = i;
-
-				from[i] = idx;
-
-				to[i] = idx;
-
-				idx++;
 
 			}
 
@@ -81,33 +66,33 @@ public class Main {
 //				System.out.println(i);
 				tree[i] = (input[tree[i * 2]] < input[tree[i * 2 + 1]]) ? tree[i * 2] : tree[i * 2 + 1];
 
-				from[i] = from[i * 2];
-
-				if (to[i * 2 + 1] == 0)
-					to[i] = to[i * 2];
-				else
-					to[i] = to[i * 2 + 1];
-
 			}
-
-			System.out.print("TREE ");
-			for (int i = 0; i < 18; i++) {
-				System.out.print(tree[i] + " ");
-			}
-//			System.out.println();
-//			for (int i = 0; i < 18; i++) {
-//				System.out.print(from[i] + " ");
-//			}
-//			System.out.println();
-//			for (int i = 0; i < 18; i++) {
-//				System.out.print(to[i] + " ");
-//			}
-			System.out.println();
-//			System.out.println(Arrays.toString(to));
-			System.out.println("calc : " + calc(4, 5));
-//			System.out.println(answer);
+			run(leafNodeS, End);
+//			System.out.println("calc : " + calc(4, 5));
+			System.out.println(answer);
 
 		}
+	}
+
+	public static void run(int start, int end) {
+
+		if (start < leafNodeS || end > End)
+			return;
+
+		if (end - start < 0)
+			return;
+
+		int idx = calc(start, end);
+//		System.out.println("idx : " + idx);
+//
+//		System.out.println("start : " + start + "; end : " + end + "; idx : " + idx + "; v : "
+//				+ (end - start + 1) * input[tree[idx]]);
+
+		if (input[tree[idx]] != INF)
+			answer = Math.max(answer, (long)(end - start + 1) * input[tree[idx]]);
+
+		run(start, idx - 1);
+		run(idx + 1, end);
 	}
 
 	/**
@@ -119,8 +104,9 @@ public class Main {
 	 */
 	public static int calc(int start, int end) {
 
-		start += leafNodeS - 1;
-		end += leafNodeS - 1;
+//		start += leafNodeS - 1;
+//		end += leafNodeS - 1;
+
 		int minValue = Integer.MAX_VALUE;
 		int rtn = 0;
 		while (start < end) {
@@ -140,19 +126,22 @@ public class Main {
 			}
 			start /= 2;
 			end /= 2;
-			if (start == end) {
-				if (minValue > input[tree[end]]) {
-					return tree[end];
-				}
+		}
+		
+		if (start == end) {
+			if (minValue > input[tree[end]]) {
+				return tree[end];
 			}
 		}
+
 		return rtn;
 
 	}
 
-	static String TC1 = "1\r\n" + "7\r\n" + "2 1 4 5 1 3 3";
-	static String TC3 = "5 1 3 2 4 6\r\n" + "0";
+	static String TC3 = "4 2 3 2 1\r\n" + "0";
 
 	static String TC2 = "7 2 1 4 5 1 3 3\r\n" + "4 1000 1000 1000 1000\r\n" + "0";
+	static String TC4 = "5 1000000000 1000000000 1000000000 1000000000 1000000000\r\n" + "0";
+	static String loofTest = "14 3 2 1 3 2 1 1 0 2 1 1 0 1 2\r\n" + "0";
 
 }
